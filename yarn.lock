@@ -1690,6 +1690,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@voiceflow/composite-reducer@workspace:libs/composite-reducer":
+  version: 0.0.0-use.local
+  resolution: "@voiceflow/composite-reducer@workspace:libs/composite-reducer"
+  languageName: unknown
+  linkType: soft
+
 "@voiceflow/dependency-cruiser-config@npm:1.8.9":
   version: 1.8.9
   resolution: "@voiceflow/dependency-cruiser-config@npm:1.8.9"

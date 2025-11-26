@@ -1,7 +1,7 @@
 # Normal Store
 
-[![npm version](https://img.shields.io/npm/v/normal-store.svg?style=flat-square)](https://www.npmjs.com/package/normal-store)
-[![npm downloads](https://img.shields.io/npm/dm/normal-store.svg?style=flat-square)](https://www.npmjs.com/package/normal-store)
+[![npm version](https://img.shields.io/npm/v/@voiceflow/normal-store.svg?style=flat-square)](https://www.npmjs.com/package/@voiceflow/normal-store)
+[![npm downloads](https://img.shields.io/npm/dm/@voiceflow/normal-store.svg?style=flat-square)](https://www.npmjs.com/package/@voiceflow/normal-store)
 
 Utilities to transform data with unique identifiers to and from a normalized data store.
 All data is treated as immutable, new data structures are returned when updating.
