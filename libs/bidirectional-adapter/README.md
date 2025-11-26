@@ -1,7 +1,7 @@
 # Bi-Directional Adapter
 
-[![npm version](https://img.shields.io/npm/v/bidirectional-adapter.svg?style=flat-square)](https://www.npmjs.com/package/bidirectional-adapter)
-[![npm downloads](https://img.shields.io/npm/dm/bidirectional-adapter.svg?style=flat-square)](https://www.npmjs.com/package/bidirectional-adapter)
+[![npm version](https://img.shields.io/npm/v/@voiceflow/bidirectional-adapter.svg?style=flat-square)](https://www.npmjs.com/package/@voiceflow/bidirectional-adapter)
+[![npm downloads](https://img.shields.io/npm/dm/@voiceflow/bidirectional-adapter.svg?style=flat-square)](https://www.npmjs.com/package/@voiceflow/bidirectional-adapter)
 
 Factory to create bi-directional adapters that can convert between two distinct data structures.
 Using adapters helps to decouple systems which share common data structures and may need to alter them

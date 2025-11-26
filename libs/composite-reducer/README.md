@@ -1,7 +1,7 @@
 # Composite Reducer
 
-[![npm version](https://img.shields.io/npm/v/composite-reducer.svg?style=flat-square)](https://www.npmjs.com/package/composite-reducer)
-[![npm downloads](https://img.shields.io/npm/dm/composite-reducer.svg?style=flat-square)](https://www.npmjs.com/package/composite-reducer)
+[![npm version](https://img.shields.io/npm/v/@voiceflow/composite-reducer.svg?style=flat-square)](https://www.npmjs.com/package/@voiceflow/composite-reducer)
+[![npm downloads](https://img.shields.io/npm/dm/@voiceflow/composite-reducer.svg?style=flat-square)](https://www.npmjs.com/package/@voiceflow/composite-reducer)
 
 [What are Reducers?](https://css-tricks.com/understanding-how-reducers-are-used-in-redux/)
 
