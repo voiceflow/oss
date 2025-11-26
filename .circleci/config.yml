@@ -44,19 +44,6 @@ workflows:
           pre-steps:
             - vfcommon/checkout_clone:
                 clone_type: treeless
-            - vfcommon/compute_base_revision:
-                base_revision: >-
-                  << pipeline.git.base_revision >>
-                  <<^ pipeline.git.base_revision >>
-                    << pipeline.git.revision >>
-                  <</ pipeline.git.base_revision >>
-                git_branch: << pipeline.git.branch >>
-            - vfcommon/set-pr-number
-            - vfcommon/set-pr-branch:
-                target_env_var: &pr_branch PR_BRANCH
-            - vfcommon/set-json-string-from-env:
-                field: pr_branch
-                value-env-var: *pr_branch
             - vfcommon/set-json-string:
                 field: branch
                 # HACK: this cannot be empty, so we pass both branch and tag (only one of them will be non-empty)
