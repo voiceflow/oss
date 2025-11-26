@@ -1,6 +1,6 @@
 {
   "name": "@voiceflow/normal-store",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "tools for interacting with normalized data structures",
   "keywords": [
     "data",
