@@ -1,0 +1,11 @@
+[
+  {
+    "type": "module",
+    "from": "src/index.ts",
+    "to": "src/index.ts",
+    "rule": {
+      "severity": "error",
+      "name": "no-orphans"
+    }
+  }
+]
