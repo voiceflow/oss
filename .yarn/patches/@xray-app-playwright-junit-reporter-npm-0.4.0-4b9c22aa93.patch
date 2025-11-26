@@ -1,0 +1,38 @@
+diff --git a/dist/index.js b/dist/index.js
+index 7dbe9b24e0710dde31c09e9f9cfca543e7b5f730..9bf8eb49b40b7cf630f605837031399a95b07444 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -40,12 +40,14 @@ class XrayJUnitReporter {
+     outputFile;
+     stripANSIControlSequences = false;
+     embedAnnotationsAsProperties = false;
++    embedTagsAsProperties = false;
+     textContentAnnotations;
+     embedAttachmentsAsProperty;
+     constructor(options = {}) {
+         this.outputFile = options.outputFile || reportOutputNameFromEnv();
+         this.stripANSIControlSequences = options.stripANSIControlSequences || false;
+         this.embedAnnotationsAsProperties = options.embedAnnotationsAsProperties || false;
++        this.embedTagsAsProperties = options.embedTagsAsProperties || false;
+         this.textContentAnnotations = options.textContentAnnotations || [];
+         this.embedAttachmentsAsProperty = options.embedAttachmentsAsProperty;
+     }
+@@ -171,6 +173,18 @@ class XrayJUnitReporter {
+                 }
+             }
+         }
++        if (this.embedTagsAsProperties && test.tags) {
++            for (const tag of test.tags) {
++                const property = {
++                    name: 'property',
++                    attributes: {
++                        name: 'tag',
++                        value: tag
++                    }
++                };
++                properties.children?.push(property);
++            }
++        }
+         const systemErr = [];
+         // attachments are optionally embed as base64 encoded content on inner <item> elements
+         if (this.embedAttachmentsAsProperty) {

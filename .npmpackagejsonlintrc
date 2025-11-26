@@ -1,0 +1,3 @@
+{
+  "extends": "@voiceflow/npm-package-json-lint-config"
+}

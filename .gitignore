@@ -1,0 +1,44 @@
+*.log
+*.local
+.cache
+
+# Node
+node_modules
+
+# TypeScript
+apps/*/build
+libs/*/build
+tests/*/build
+meta/*/build
+
+# Turborepo
+.turbo
+
+# Dotenv
+.env
+.env.*
+!.env.e2e
+!.env.test
+
+# MacOS
+.DS_Store
+
+# ESlint
+.eslintcache
+
+# Yarn
+.pnp.*
+.yarn/*.gz
+.yarn/cache
+.yarn/versions
+
+# Tests
+reports
+*.report.xml
+
+# Coverage
+sonar
+.nyc_output
+
+#jetbrains
+.idea

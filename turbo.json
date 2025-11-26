@@ -1,0 +1,28 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build:cmd": {
+      "outputs": ["build/**"],
+      "inputs": [
+        "../../scripts/build_pkg.sh",
+        "src/**",
+        ":!src/**/*.test.ts",
+        "package.json",
+        "tsconfig.json",
+        "tsconfig.build.json",
+        "tsconfig.build.*.json"
+      ],
+      "dependsOn": ["^build:cmd"]
+    },
+    "test:types": {
+      "inputs": ["src/**", "package.json", "tsconfig.json", "tsconfig.build.json", "tsconfig.build.*.json"],
+      "dependsOn": ["^build:cmd"]
+    },
+    "test:dependencies": {
+      "inputs": ["src/**", "package.json", ".dependency-cruiser.mjs", ".dependency-cruiser-known-violations.json"]
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}
