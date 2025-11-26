@@ -1675,6 +1675,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@voiceflow/bidirectional-adapter@workspace:libs/bidirectional-adapter":
+  version: 0.0.0-use.local
+  resolution: "@voiceflow/bidirectional-adapter@workspace:libs/bidirectional-adapter"
+  languageName: unknown
+  linkType: soft
+
 "@voiceflow/commitlint-config@npm:2.6.0":
   version: 2.6.0
   resolution: "@voiceflow/commitlint-config@npm:2.6.0"
@@ -1743,6 +1749,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@voiceflow/husky-config@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@voiceflow/husky-config@npm:1.1.0"
+  dependencies:
+    husky: 9.1.6
+  checksum: 39375556114e01614bc137d47831dafc1323398100d80ead0f1fe66be59b09e2ee7c54cb2f3d4665e68a8f487d3733bc5f4359abadc42581fd1174ef44bffa14
+  languageName: node
+  linkType: hard
+
 "@voiceflow/normal-store@workspace:libs/normal-store":
   version: 0.0.0-use.local
   resolution: "@voiceflow/normal-store@workspace:libs/normal-store"
@@ -1753,15 +1768,6 @@ __metadata:
   version: 1.1.0
   resolution: "@voiceflow/npm-package-json-lint-config@npm:1.1.0"
   checksum: 2797f0621671e138ad0ffa0d8acfd1f8d8a94fd20c0a38a97e9d53e1c93d740ea00935aff4fafca62a7fb4d539a064118ef0ec273f2773dc270fb802db602a24
-  languageName: node
-  linkType: hard
-
-"@voiceflow/package-scripts@npm:1.4.1":
-  version: 1.4.1
-  resolution: "@voiceflow/package-scripts@npm:1.4.1"
-  bin:
-    vfpkg: bin/vfpkg
-  checksum: 6aeb3a383a49a7030b10e26c8d3e777fe3548722c5b0d88b4be97fa23d5682bed8649dd77f1eb023354d70306b34f8878a920a10538518fd358edf89e3809099
   languageName: node
   linkType: hard
 
@@ -5280,6 +5286,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"husky@npm:9.1.6":
+  version: 9.1.6
+  resolution: "husky@npm:9.1.6"
+  bin:
+    husky: bin.js
+  checksum: 421ccd8850378231aaefd70dbe9e4f1549b84ffe3a6897f93a202242bbc04e48bd498169aef43849411105d9fcf7c192b757d42661e28d06b934a609a4eb8771
+  languageName: node
+  linkType: hard
+
 "iconv-lite@npm:^0.6.2":
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
@@ -7807,8 +7822,8 @@ __metadata:
     "@voiceflow/eslint-config": 7.16.0
     "@voiceflow/eslint-plugin": 1.4.0
     "@voiceflow/git-branch-check": 1.4.2
+    "@voiceflow/husky-config": 1.1.0
     "@voiceflow/npm-package-json-lint-config": 1.1.0
-    "@voiceflow/package-scripts": 1.4.1
     "@voiceflow/prettier-config": 1.10.0
     "@voiceflow/tsconfig": 1.11.1
     "@voiceflow/vitest-config": 1.10.0

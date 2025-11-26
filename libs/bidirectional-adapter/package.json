@@ -1,12 +1,14 @@
 {
-  "name": "@voiceflow/normal-store",
-  "version": "2.1.0",
-  "description": "tools for interacting with normalized data structures",
+  "name": "@voiceflow/bidirectional-adapter",
+  "version": "2.0.0",
+  "description": "bi-directional adapter factory, used to decouple systems across shared data structures",
   "keywords": [
+    "adapter",
     "data",
+    "model",
     "voiceflow"
   ],
-  "homepage": "https://github.com/voiceflow/oss/tree/master/libs/normal-store#readme",
+  "homepage": "https://github.com/voiceflow/oss/tree/master/libs/bidirectional-adapter#readme",
   "bugs": {
     "url": "https://github.com/voiceflow/oss/issues"
   },
@@ -23,7 +25,7 @@
     "build"
   ],
   "scripts": {
-    "build": "yarn g:turbo run build:cmd --filter=@voiceflow/normal-store...",
+    "build": "yarn g:turbo run build:cmd --filter=@voiceflow/bidirectional-adapter...",
     "build:cmd": "yarn g:build:pkg",
     "clean": "yarn g:rimraf build",
     "lint": "yarn g:run-p -c lint:eslint lint:prettier",
