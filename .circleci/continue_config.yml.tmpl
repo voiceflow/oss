@@ -1,0 +1,116 @@
+version: 2.1
+
+parameters:
+  ssh-fingerprint:
+    type: string
+    default: "SHA256:jV+vtmEE6tY1NjGJKLYccAoeQAbVEQ805X70tJHiQ9Q"
+  GHA_Actor:
+    type: string
+    default: ''
+  GHA_Action:
+    type: string
+    default: ''
+  GHA_Event:
+    type: string
+    default: ''
+  GHA_Meta:
+    type: string
+    default: ''
+
+orbs:
+  vfcommon: voiceflow/common@{{ .values.common_orb_version }}
+  sonarcloud: sonarsource/sonarcloud@2.0.0
+  docker: circleci/docker@3.0.0
+
+{{- ne .values.branch "staging" | test.Assert "staging is a deprecated bors branch and should not be in use" }}
+
+{{- $mqBranches := coll.Slice "trying" "/^gtmq_.*/" }}
+{{- $isMaster := eq .values.branch "master" }}
+
+{{/* isBors denotes whether we are on a gtmq_/trying branch */}}
+{{- $isBors := or (.values.branch | strings.HasPrefix "gtmq_") (has $mqBranches .values.branch) }}
+
+# Reusable YAML chunks
+defaults:
+  slack-fail-post-step: &slack-fail-post-step
+    post-steps:
+      - vfcommon/notify_slack:
+          channel: dev_general
+          event: fail
+          mentions: "@eng_dx"
+          template: basic_fail_1
+          branch_pattern: master
+
+  executor: &node-executor
+    name: vfcommon/node-executor-node-20
+    tag: {{ .values.node_version }}-vf-5
+
+workflows:
+  {{- if $isMaster }}
+  test-and-release:
+  {{- else if $isBors }}
+  e2e-tests:
+  {{- else }}
+  test:
+  {{- end }}
+    jobs:
+      - vfcommon/install_and_build:
+          <<: *slack-fail-post-step
+          executor:
+            <<: *node-executor
+            default_resource_class: xlarge
+          context: dev-test
+          avoid_post_install_scripts: false
+          name: build
+          package: all
+          monorepo_engine: "turborepo"
+          force_execute: true
+          run_in_container: false
+          container_folder_to_copy: "" #Copy all
+
+      {{- $testJobs := (coll.Slice "lint_report" "types_tests" "dependency_tests" "unit_tests")}}
+      {{ range $testJob := $testJobs }}
+      - vfcommon/monorepo_{{ $testJob }}:
+          <<: *slack-fail-post-step
+          context: dev-test
+          name: {{ strings.KebabCase $testJob }}
+          run_on_root: true
+          executor:
+            <<: *node-executor
+            default_resource_class: xlarge
+            default_node_memory: "8096"
+          requires:
+            - build
+          filters:
+            branches:
+              ignore:
+                - production
+                - /^break-glass.*$/
+        {{- end }}
+
+      - vfcommon/sonarcloud_scan:
+          <<: *slack-fail-post-step
+          context: dev-test
+          name: sonarcloud-scan
+          filters:
+            branches:
+              ignore:
+                - production
+                - /^break-glass.*$/
+
+      - vfcommon/monorepo_release:
+          <<: *slack-fail-post-step
+          executor: *node-executor
+          avoid_post_install_scripts: false
+          ssh_key: << pipeline.parameters.ssh-fingerprint >>
+          context: dev-test
+          release_engine: "lite"
+          requires:
+            {{- range $testJob := $testJobs }}
+            - {{ strings.KebabCase $testJob }}
+            {{- end }}
+            - build
+          filters:
+            branches:
+              only: master
+  {{- end }}

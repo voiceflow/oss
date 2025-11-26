@@ -1,0 +1,54 @@
+version: 2.1
+
+parameters:
+  ssh-fingerprint:
+    type: string
+    default: 'SHA256:jV+vtmEE6tY1NjGJKLYccAoeQAbVEQ805X70tJHiQ9Q'
+  build-apps:
+    type: boolean
+    default: false
+  build-all:
+    type: boolean
+    default: false
+  GHA_Actor:
+    type: string
+    default: ''
+  GHA_Action:
+    type: string
+    default: ''
+  GHA_Event:
+    type: string
+    default: ''
+  GHA_Meta:
+    type: string
+    default: ''
+
+orbs:
+  vfcommon: voiceflow/common@0.95.1
+
+workflows:
+  test-and-release:
+    jobs:
+      - vfcommon/install_and_build:
+          executor: &node-executor
+            name: vfcommon/node-executor-node-20
+            default_resource_class: large
+          context: dev-test
+          avoid_post_install_scripts: false
+          name: build
+          package: all
+          monorepo_engine: 'turborepo'
+          force_execute: true
+          run_in_container: false
+          container_folder_to_copy: '' #Copy all
+
+      - vfcommon/monorepo_release:
+          name: monorepo_prerelease
+          executor: *node-executor
+          avoid_post_install_scripts: false
+          ssh_key: << pipeline.parameters.ssh-fingerprint >>
+          context: dev-test
+          prerelease: true
+          release_engine: 'lite'
+          requires:
+            - build
