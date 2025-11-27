@@ -3,8 +3,11 @@
   "extends": "@voiceflow/tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
+    "outDir": "build",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+      "@test/*": ["./test/*"]
+    },
+    "jsx": "react-jsx"
   }
 }
