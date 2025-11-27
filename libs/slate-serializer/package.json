@@ -1,0 +1,97 @@
+{
+  "name": "@voiceflow/slate-serializer",
+  "version": "2.0.0",
+  "description": "Utilities for serializing slate data",
+  "keywords": [
+    "react",
+    "slate",
+    "voiceflow"
+  ],
+  "homepage": "https://github.com/voiceflow/oss/tree/master/libs/slate-serializer#readme",
+  "bugs": {
+    "url": "https://github.com/voiceflow/oss/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voiceflow/oss.git"
+  },
+  "license": "ISC",
+  "author": "Ben Teichman",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./build/esm/index.d.ts",
+      "import": "./build/esm/index.mjs",
+      "require": "./build/cjs/index.cjs"
+    },
+    "./text": {
+      "types": "./build/esm/serializers/text.d.ts",
+      "import": "./build/esm/serializers/text.mjs",
+      "require": "./build/cjs/serializers/text.cjs"
+    },
+    "./markdown": {
+      "types": "./build/esm/serializers/markdown.d.ts",
+      "import": "./build/esm/serializers/markdown.mjs",
+      "require": "./build/cjs/serializers/markdown.cjs"
+    },
+    "./jsx": {
+      "types": "./build/esm/serializers/jsx.d.ts",
+      "import": "./build/esm/serializers/jsx.mjs",
+      "require": "./build/cjs/serializers/jsx.cjs"
+    }
+  },
+  "main": "build/cjs/index.js",
+  "types": "build/esm/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "text": [
+        "./build/esm/serializers/text.d.ts"
+      ],
+      "jsx": [
+        "./build/esm/serializers/jsx.d.ts"
+      ],
+      "markdown": [
+        "./build/esm/serializers/markdown.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "yarn g:turbo run build:cmd --filter=@voiceflow/slate-serializer...",
+    "build:cmd": "yarn g:build:pkg",
+    "clean": "yarn g:rimraf build",
+    "lint": "yarn g:run-p -c lint:eslint lint:prettier",
+    "lint:eslint": "yarn g:eslint",
+    "lint:fix": "yarn g:run-p -c \"lint:eslint --fix\" \"lint:prettier --write\"",
+    "lint:prettier": "yarn g:prettier --check",
+    "tdd": "yarn g:vitest",
+    "test": "yarn g:run-p -c test:dependencies test:types test:unit",
+    "test:dependencies": "yarn g:depcruise",
+    "test:types": "yarn g:tsc --noEmit",
+    "test:unit": "yarn g:vitest run --coverage"
+  },
+  "dependencies": {
+    "csstype": "3.2.3"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.4",
+    "@voiceflow/dtos-interact": "1.17.1",
+    "react": "18.2.0",
+    "slate": "0.94.1",
+    "zod": "3.22.4"
+  },
+  "peerDependencies": {
+    "@voiceflow/dtos-interact": "^1.17.1",
+    "react": "^17.0.2",
+    "slate": "^0.72.3",
+    "zod": "^3"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
