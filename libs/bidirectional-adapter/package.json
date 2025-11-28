@@ -19,14 +19,17 @@
   "license": "ISC",
   "author": "Tyler Han, Ben Teichman",
   "type": "module",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "types": "build/esm/index.d.ts",
   "files": [
     "build"
   ],
   "scripts": {
     "build": "yarn g:turbo run build:cmd --filter=@voiceflow/bidirectional-adapter...",
-    "build:cmd": "yarn g:build:pkg",
+    "build:cjs": "yarn g:build:pkg cjs",
+    "build:cmd": "yarn g:run-p build:cjs build:esm",
+    "build:esm": "yarn g:build:pkg esm",
     "clean": "yarn g:rimraf build",
     "lint": "yarn g:run-p -c lint:eslint lint:prettier",
     "lint:eslint": "yarn g:eslint",
