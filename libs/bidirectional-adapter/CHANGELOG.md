@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/voiceflow/oss/compare/@voiceflow/bidirectional-adapter@2.3.0...@voiceflow/bidirectional-adapter@2.3.1) (2025-11-28)
+
+### Bug Fixes
+
+* build cjs bidirectional-adapter (ENG-744) ([#8](https://github.com/voiceflow/oss/issues/8)) ([3e4981a](https://github.com/voiceflow/oss/commit/3e4981a46f22c18bc6909f1f1df6b08c65fd5501))
+
 # [2.3.0](https://github.com/voiceflow/oss/compare/@voiceflow/bidirectional-adapter@2.2.0...@voiceflow/bidirectional-adapter@2.3.0) (2025-11-27)
 
 ### Features
