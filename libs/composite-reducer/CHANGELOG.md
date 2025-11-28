@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/voiceflow/oss/compare/@voiceflow/composite-reducer@2.2.0...@voiceflow/composite-reducer@2.2.1) (2025-11-28)
+
+### Bug Fixes
+
+* update readme to reference scoped package ([670fef4](https://github.com/voiceflow/oss/commit/670fef448407258fda34c30f6740ba847e10729a))
+
 # [2.2.0](https://github.com/voiceflow/oss/compare/@voiceflow/composite-reducer@2.1.0...@voiceflow/composite-reducer@2.2.0) (2025-11-27)
 
 ### Features
