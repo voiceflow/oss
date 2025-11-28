@@ -54,7 +54,7 @@ Along with [`combinedReducer`](), this encourges the overall reducer to be clean
 ## Example
 
 ```
-import compositeReducer from 'composite-reducer';
+import compositeReducer from '@voiceflow/composite-reducer';
 
 const mainReducer = (state, action) => {
     // do reducer stuff here
