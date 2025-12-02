@@ -10,6 +10,7 @@ A collection of libraries maintained by the Voiceflow team.
 - [`@voiceflow/bidirectional-adapter`](./libs/bidirectional-adapter/README.md) - bi-directional adapter factory used to decouple data structures between systems
 - [`@voiceflow/composite-reducer`](./libs/composite-reducer/README.md) - break down reducers by properties
 - [`@voiceflow/slate-serializer`](./libs/slate-serializer/README.md) - utilities for rendering slate data with react
+- [`@voiceflow/nestjs-chargebee`](./libs/nestjs-chargebee/README.md) - NestJS library for the Chargebee API
 
 ## Install
 
