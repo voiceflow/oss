@@ -1,0 +1,137 @@
+import type { ChargebeeModuleOptions } from './chargebee.interface';
+import { AddonResource } from './resources/addon-resource';
+import { AddressResource } from './resources/address-resource';
+import { AttachedItemResource } from './resources/attached-item-resource';
+import { CardResource } from './resources/card-resource';
+import { CommentResource } from './resources/comment-resource';
+import { CouponCodeResource } from './resources/coupon-code-resource';
+import { CouponResource } from './resources/coupon-resource';
+import { CouponSetResource } from './resources/coupon-set-resource';
+import { CreditNoteResource } from './resources/credit-note-resource';
+import { CustomerResource } from './resources/customer-resource';
+import { DifferentialPriceResource } from './resources/differential-price-resource';
+import { DownloadResource } from './resources/download.resource';
+import { EntitlementOverrideResource } from './resources/entitlement-override-resource';
+import { EntitlementResource } from './resources/entitlement-resource';
+import { EstimateResource } from './resources/estimate-resource';
+import { ExportResource } from './resources/export-resource';
+import { FeatureResource } from './resources/feature-resource';
+import { GiftResource } from './resources/gift-resource';
+import { HostedPageResource } from './resources/hosted-page-resource';
+import { InAppSubscriptionResource } from './resources/in-app-subscription-resource';
+import { InvoiceResource } from './resources/invoice-resource';
+import { ItemEntitlementResource } from './resources/item-entitlement-resource';
+import { ItemFamilyResource } from './resources/item-family-resource';
+import { ItemPriceResource } from './resources/item-price-resource';
+import { ItemResource } from './resources/item-resource';
+import { NonSubscriptionResource } from './resources/non-subscription-resource';
+import { OrderResource } from './resources/order-resource';
+import { PaymentIntentResource } from './resources/payment-intent-resource';
+import { PaymentSourceResource } from './resources/payment-source-resource';
+import { PaymentVoucherResource } from './resources/payment-voucher-resource';
+import { PlanResource } from './resources/plan-resource';
+import { PortalSessionResource } from './resources/portal-session-resource';
+import { PromotionalCreditResource } from './resources/promotional-credit-resource';
+import { PurchaseResource } from './resources/purchase-resource';
+import { QuoteResource } from './resources/quote-resource';
+import { ResourceMigrationResource } from './resources/resource-migration-resource';
+import { SiteMigrationDetailResource } from './resources/site-migration-detail-resource';
+import { SubscriptionEntitlementResource } from './resources/subscription-entitlement-resource';
+import { SubscriptionResource } from './resources/subscription-resource';
+import { TimeMachineResource } from './resources/time-machine-resource';
+import { TransactionResource } from './resources/transaction-resource';
+import { UnbilledChargeResource } from './resources/unbilled-charge-resource';
+import { UsageResource } from './resources/usage-resource';
+import { VirtualBankAccountResource } from './resources/virtual-bank-account-resource';
+
+export class ChargebeeResourceWrapper {
+  constructor(private readonly options: ChargebeeModuleOptions) {}
+
+  subscription = new SubscriptionResource(this.options);
+
+  customer = new CustomerResource(this.options);
+
+  paymentSource = new PaymentSourceResource(this.options);
+
+  virtualBankAccount = new VirtualBankAccountResource(this.options);
+
+  card = new CardResource(this.options);
+
+  promotionalCredit = new PromotionalCreditResource(this.options);
+
+  invoice = new InvoiceResource(this.options);
+
+  creditNote = new CreditNoteResource(this.options);
+
+  unbilledCharge = new UnbilledChargeResource(this.options);
+
+  order = new OrderResource(this.options);
+
+  gift = new GiftResource(this.options);
+
+  transaction = new TransactionResource(this.options);
+
+  hostedPage = new HostedPageResource(this.options);
+
+  estimate = new EstimateResource(this.options);
+
+  quote = new QuoteResource(this.options);
+
+  plan = new PlanResource(this.options);
+
+  addon = new AddonResource(this.options);
+
+  coupon = new CouponResource(this.options);
+
+  couponSet = new CouponSetResource(this.options);
+
+  couponCode = new CouponCodeResource(this.options);
+
+  address = new AddressResource(this.options);
+
+  usage = new UsageResource(this.options);
+
+  comment = new CommentResource(this.options);
+
+  portalSession = new PortalSessionResource(this.options);
+
+  siteMigrationDetail = new SiteMigrationDetailResource(this.options);
+
+  resourceMigration = new ResourceMigrationResource(this.options);
+
+  timeMachine = new TimeMachineResource(this.options);
+
+  export = new ExportResource(this.options);
+
+  paymentIntent = new PaymentIntentResource(this.options);
+
+  itemFamily = new ItemFamilyResource(this.options);
+
+  item = new ItemResource(this.options);
+
+  itemPrice = new ItemPriceResource(this.options);
+
+  attachedItem = new AttachedItemResource(this.options);
+
+  differentialPrice = new DifferentialPriceResource(this.options);
+
+  feature = new FeatureResource(this.options);
+
+  subscriptionEntitlement = new SubscriptionEntitlementResource(this.options);
+
+  itemEntitlement = new ItemEntitlementResource(this.options);
+
+  inAppSubscription = new InAppSubscriptionResource(this.options);
+
+  nonSubscription = new NonSubscriptionResource(this.options);
+
+  entitlement = new EntitlementResource(this.options);
+
+  entitlementOverride = new EntitlementOverrideResource(this.options);
+
+  purchase = new PurchaseResource(this.options);
+
+  paymentVoucher = new PaymentVoucherResource(this.options);
+
+  download = new DownloadResource(this.options);
+}
