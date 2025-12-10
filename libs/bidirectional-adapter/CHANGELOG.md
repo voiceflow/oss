@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.2](https://github.com/voiceflow/oss/compare/@voiceflow/bidirectional-adapter@2.3.1...@voiceflow/bidirectional-adapter@2.3.2) (2025-12-10)
+
+### Bug Fixes
+
+* add exports (COR-9074) ([#12](https://github.com/voiceflow/oss/issues/12)) ([4a3896f](https://github.com/voiceflow/oss/commit/4a3896f87266270c701715be58a3db0c8ce8a7a3))
+
 ## [2.3.1](https://github.com/voiceflow/oss/compare/@voiceflow/bidirectional-adapter@2.3.0...@voiceflow/bidirectional-adapter@2.3.1) (2025-11-28)
 
 ### Bug Fixes
