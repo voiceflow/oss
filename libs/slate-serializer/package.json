@@ -41,6 +41,7 @@
     }
   },
   "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
   "types": "build/esm/index.d.ts",
   "typesVersions": {
     "*": {
@@ -60,7 +61,9 @@
   ],
   "scripts": {
     "build": "yarn g:turbo run build:cmd --filter=@voiceflow/slate-serializer...",
-    "build:cmd": "yarn g:build:pkg",
+    "build:cjs": "yarn g:build:pkg cjs",
+    "build:cmd": "yarn g:run-p build:cjs build:esm",
+    "build:esm": "yarn g:build:pkg esm",
     "clean": "yarn g:rimraf build",
     "lint": "yarn g:run-p -c lint:eslint lint:prettier",
     "lint:eslint": "yarn g:eslint",
@@ -72,18 +75,17 @@
     "test:types": "yarn g:tsc --noEmit",
     "test:unit": "yarn g:vitest run --coverage"
   },
-  "dependencies": {
-    "csstype": "3.2.3"
-  },
   "devDependencies": {
     "@types/react": "18.2.4",
     "@voiceflow/dtos-interact": "1.17.1",
+    "csstype": "3.2.3",
     "react": "18.2.0",
     "slate": "0.94.1",
     "zod": "3.22.4"
   },
   "peerDependencies": {
     "@voiceflow/dtos-interact": "^1.17.1",
+    "csstype": "^3.2.3",
     "react": "^17.0.2",
     "slate": "^0.72.3",
     "zod": "^3"

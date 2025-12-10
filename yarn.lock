@@ -1916,6 +1916,7 @@ __metadata:
     zod: 3.22.4
   peerDependencies:
     "@voiceflow/dtos-interact": ^1.17.1
+    csstype: ^3.2.3
     react: ^17.0.2
     slate: ^0.72.3
     zod: ^3
