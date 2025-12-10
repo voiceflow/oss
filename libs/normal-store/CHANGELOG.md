@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.1](https://github.com/voiceflow/oss/compare/@voiceflow/normal-store@2.4.0...@voiceflow/normal-store@2.4.1) (2025-12-10)
+
+### Bug Fixes
+
+* build cjs and ems versions (COR-9094) ([#13](https://github.com/voiceflow/oss/issues/13)) ([882de7e](https://github.com/voiceflow/oss/commit/882de7ede7dd14d4f60016d17571d8fbc89532ef))
+
 # [2.4.0](https://github.com/voiceflow/oss/compare/@voiceflow/normal-store@2.3.0...@voiceflow/normal-store@2.4.0) (2025-11-27)
 
 ### Features
