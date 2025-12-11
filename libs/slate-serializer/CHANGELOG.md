@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.3](https://github.com/voiceflow/oss/compare/@voiceflow/slate-serializer@2.1.2...@voiceflow/slate-serializer@2.1.3) (2025-12-11)
+
+### Bug Fixes
+
+* add exitentions to esm package (COR-9112) ([#15](https://github.com/voiceflow/oss/issues/15)) ([9e6ac99](https://github.com/voiceflow/oss/commit/9e6ac99835952a64d1863cf8a056ee4468af2d3e))
+
 ## [2.1.2](https://github.com/voiceflow/oss/compare/@voiceflow/slate-serializer@2.1.1...@voiceflow/slate-serializer@2.1.2) (2025-12-11)
 
 ### Bug Fixes
