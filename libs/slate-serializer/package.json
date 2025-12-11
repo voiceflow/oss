@@ -21,23 +21,23 @@
   "exports": {
     ".": {
       "types": "./build/esm/index.d.ts",
-      "import": "./build/esm/index.mjs",
-      "require": "./build/cjs/index.cjs"
+      "import": "./build/esm/index.js",
+      "require": "./build/cjs/index.js"
     },
     "./text": {
       "types": "./build/esm/serializers/text.d.ts",
-      "import": "./build/esm/serializers/text.mjs",
-      "require": "./build/cjs/serializers/text.cjs"
+      "import": "./build/esm/serializers/text.js",
+      "require": "./build/cjs/serializers/text.js"
     },
     "./markdown": {
       "types": "./build/esm/serializers/markdown.d.ts",
-      "import": "./build/esm/serializers/markdown.mjs",
-      "require": "./build/cjs/serializers/markdown.cjs"
+      "import": "./build/esm/serializers/markdown.js",
+      "require": "./build/cjs/serializers/markdown.js"
     },
     "./jsx": {
       "types": "./build/esm/serializers/jsx.d.ts",
-      "import": "./build/esm/serializers/jsx.mjs",
-      "require": "./build/cjs/serializers/jsx.cjs"
+      "import": "./build/esm/serializers/jsx.js",
+      "require": "./build/cjs/serializers/jsx.js"
     }
   },
   "main": "build/cjs/index.js",
