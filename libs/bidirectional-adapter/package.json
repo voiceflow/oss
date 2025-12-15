@@ -1,6 +1,6 @@
 {
   "name": "@voiceflow/bidirectional-adapter",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "bi-directional adapter factory, used to decouple systems across shared data structures",
   "keywords": [
     "adapter",

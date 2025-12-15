@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/voiceflow/oss/compare/@voiceflow/nestjs-chargebee@2.1.0...@voiceflow/nestjs-chargebee@2.1.1) (2025-12-15)
+
+**Note:** Version bump only for package @voiceflow/nestjs-chargebee
+
 # 2.1.0 (2025-12-02)
 
 ### Features
