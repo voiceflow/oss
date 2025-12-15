@@ -132,8 +132,12 @@ export interface SmartSimpleAdapter<
   fromDB: SmartFromDB<DBModel, Model, FromDBArgs, KeyRemap>;
 }
 
-export interface MultiAdapter<DBModel, Model, FromDBArgs extends any[] = [], ToDBArgs extends any[] = []>
-  extends SimpleAdapter<DBModel, Model, FromDBArgs, ToDBArgs> {
+export interface MultiAdapter<
+  DBModel,
+  Model,
+  FromDBArgs extends any[] = [],
+  ToDBArgs extends any[] = [],
+> extends SimpleAdapter<DBModel, Model, FromDBArgs, ToDBArgs> {
   mapToDB: MapToDB<DBModel, Model, ToDBArgs>;
   mapFromDB: MapFromDB<DBModel, Model, FromDBArgs>;
 }
