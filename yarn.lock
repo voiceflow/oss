@@ -1975,6 +1975,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@voiceflow/universal-mock@workspace:libs/universal-mock":
+  version: 0.0.0-use.local
+  resolution: "@voiceflow/universal-mock@workspace:libs/universal-mock"
+  peerDependencies:
+    vitest: ^4
+  peerDependenciesMeta:
+    vitest:
+      optional: true
+  languageName: unknown
+  linkType: soft
+
 "@voiceflow/vitest-config@npm:1.11.2":
   version: 1.11.2
   resolution: "@voiceflow/vitest-config@npm:1.11.2"
