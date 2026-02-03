@@ -1,0 +1,13 @@
+import type { createMockFactory } from '@voiceflow/test-common';
+import type { MockInstance as ViMockInstance } from 'vitest';
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import { vi } from 'vitest';
+
+export type { DeepMocked, DeepPartial } from '@voiceflow/test-common';
+export { mockFree } from '@voiceflow/test-common';
+
+export const createMock: ReturnType<typeof createMockFactory<typeof vi>>;
+
+declare module '@voiceflow/test-common' {
+  export interface MockInstance<T, Y extends any[]> extends ViMockInstance<(...args: Y) => T> {}
+}
