@@ -1,5 +1,5 @@
 /**
- * this implementation was copied from the package `@voiceflow/test-common/jest`
+ * this implementation was copied from the package `@golevelup/ts-jest`
  * so that we can make it framework-agnostic (jest vs vitest)
  *
  * you can find the original implementation here:
