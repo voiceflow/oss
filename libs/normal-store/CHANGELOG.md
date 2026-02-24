@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.2](https://github.com/voiceflow/oss/compare/@voiceflow/normal-store@2.4.1...@voiceflow/normal-store@2.4.2) (2026-02-24)
+
+**Note:** Version bump only for package @voiceflow/normal-store
+
 ## [2.4.1](https://github.com/voiceflow/oss/compare/@voiceflow/normal-store@2.4.0...@voiceflow/normal-store@2.4.1) (2025-12-10)
 
 ### Bug Fixes

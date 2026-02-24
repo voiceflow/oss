@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.4](https://github.com/voiceflow/oss/compare/@voiceflow/slate-serializer@2.1.3...@voiceflow/slate-serializer@2.1.4) (2026-02-24)
+
+**Note:** Version bump only for package @voiceflow/slate-serializer
+
 ## [2.1.3](https://github.com/voiceflow/oss/compare/@voiceflow/slate-serializer@2.1.2...@voiceflow/slate-serializer@2.1.3) (2025-12-11)
 
 ### Bug Fixes

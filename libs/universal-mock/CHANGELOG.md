@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/voiceflow/oss/compare/@voiceflow/universal-mock@1.1.0...@voiceflow/universal-mock@1.1.1) (2026-02-24)
+
+**Note:** Version bump only for package @voiceflow/universal-mock
+
 # 1.1.0 (2026-02-03)
 
 ### Features
