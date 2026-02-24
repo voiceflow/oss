@@ -11,6 +11,7 @@ A collection of libraries maintained by the Voiceflow team.
 - [`@voiceflow/composite-reducer`](./libs/composite-reducer/README.md) - break down reducers by properties
 - [`@voiceflow/slate-serializer`](./libs/slate-serializer/README.md) - utilities for rendering slate data with react
 - [`@voiceflow/nestjs-chargebee`](./libs/nestjs-chargebee/README.md) - NestJS library for the Chargebee API
+- [`@voiceflow/universal-mock`](./libs/universal-mock/README.md) - Universal mocking utility
 
 ## Install
 

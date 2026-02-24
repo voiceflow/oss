@@ -18,10 +18,16 @@
       "inputs": ["src/**", "package.json", "tsconfig.json", "tsconfig.build.json", "tsconfig.build.*.json"],
       "dependsOn": ["^build:cmd"]
     },
-    "test:dependencies": {
-      "inputs": ["src/**", "package.json", ".dependency-cruiser.mjs", ".dependency-cruiser-known-violations.json"]
+    "test:cycles": {
+      "inputs": ["src/**", "package.json", "tsconfig.json"]
     },
     "clean": {
+      "cache": false
+    },
+    "//#test:unused": {
+      "cache": false
+    },
+    "//#test:unit": {
       "cache": false
     }
   }
