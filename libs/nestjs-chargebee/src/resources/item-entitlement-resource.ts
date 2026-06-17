@@ -8,11 +8,11 @@ export class ItemEntitlementResource extends ChargebeeResource {
     item_entitlement: { optional: false },
   });
 
-  public readonly addItemEntitlements = super.request('itemEntitlement', 'addItemEntitlements', {
+  public readonly addItemEntitlements = super.listRequest('itemEntitlement', 'addItemEntitlements', {
     item_entitlement: { optional: false },
   });
 
-  public readonly upsertOrRemoveItemEntitlementsForItem = super.request(
+  public readonly upsertOrRemoveItemEntitlementsForItem = super.listRequest(
     'itemEntitlement',
     'upsertOrRemoveItemEntitlementsForItem',
     { item_entitlement: { optional: false } }

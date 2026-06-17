@@ -1,6 +1,6 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class EntitlementOverrideResource extends ChargebeeResource {
-  public readonly addEntitlementOverrideForSubscription = super.request(
+  public readonly addEntitlementOverrideForSubscription = super.listRequest(
     'entitlementOverride',
     // eslint-disable-next-line no-secrets/no-secrets
     'addEntitlementOverrideForSubscription',

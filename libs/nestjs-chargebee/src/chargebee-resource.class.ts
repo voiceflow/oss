@@ -59,9 +59,9 @@ export class ChargebeeResource {
 
     const method = async (...args: Parameters<MethodDefinition>) => {
       const listResult = await (
-        functionDef as (...a: any[]) => Promise<{ list: Array<Record<string, unknown>>; next_offset?: string }>
+        functionDef as (...a: any[]) => Promise<{ list: Array<unknown>; next_offset?: string }>
       )(...args);
-      const items = listResult.list.map(this.resolveResult(returning));
+      const items = listResult.list.map((item) => this.resolveResult(returning)(item as Record<string, unknown>));
       return {
         items,
         nextOffset: listResult.next_offset as string | undefined,

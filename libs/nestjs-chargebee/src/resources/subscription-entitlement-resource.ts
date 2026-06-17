@@ -6,7 +6,7 @@ export class SubscriptionEntitlementResource extends ChargebeeResource {
     { subscription_entitlement: { optional: false } }
   );
 
-  public readonly setSubscriptionEntitlementAvailability = super.request(
+  public readonly setSubscriptionEntitlementAvailability = super.listRequest(
     'subscriptionEntitlement',
     'setSubscriptionEntitlementAvailability',
     { subscription_entitlement: { optional: false } }
