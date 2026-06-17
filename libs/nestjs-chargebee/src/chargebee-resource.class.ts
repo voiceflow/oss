@@ -61,7 +61,7 @@ export class ChargebeeResource {
       const listResult = await (
         functionDef as (...a: any[]) => Promise<{ list: Array<unknown>; next_offset?: string }>
       )(...args);
-      const items = listResult.list.map((item) => this.resolveResult(returning)(item as Record<string, unknown>));
+      const items = (listResult.list as Array<Record<string, unknown>>).map(this.resolveResult(returning));
       return {
         items,
         nextOffset: listResult.next_offset as string | undefined,
@@ -73,7 +73,7 @@ export class ChargebeeResource {
 
       do {
         // eslint-disable-next-line no-loop-func
-        const forwardArgs = args.map((arg) => Object.assign(arg, { offset })) as Parameters<typeof method>;
+        const forwardArgs = args.map((arg) => ({ ...arg, offset })) as Parameters<typeof method>;
 
         // eslint-disable-next-line no-await-in-loop
         const listResult = await method(...forwardArgs);
