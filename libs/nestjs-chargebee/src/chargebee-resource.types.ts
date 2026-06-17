@@ -1,6 +1,9 @@
 import type Chargebee from 'chargebee';
 
-type ChargebeeListResponse = { list: Array<unknown>; next_offset?: string };
+interface ChargebeeListResponse {
+  list: Array<unknown>;
+  next_offset?: string;
+}
 
 export type ResultMethodName<
   TResource extends keyof Chargebee,

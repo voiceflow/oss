@@ -1,5 +1,5 @@
-import Chargebee from 'chargebee';
 import type { Config } from 'chargebee';
+import Chargebee from 'chargebee';
 
 import type { ChargebeeModuleOptions } from './chargebee.interface';
 

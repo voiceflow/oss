@@ -1,77 +1,71 @@
-import { ChargeBee } from 'chargebee-typescript';
-import type { ListResult } from 'chargebee-typescript/lib/list_result';
-import type { RequestWrapper } from 'chargebee-typescript/lib/request_wrapper';
-import type { Result } from 'chargebee-typescript/lib/result';
+import type Chargebee from 'chargebee';
 
 import type { ChargebeeModuleOptions } from './chargebee.interface';
-import { configureChargebee } from './chargebee.utils';
+import { createChargebee } from './chargebee.utils';
 import {
   isListOffsetOption,
   type ListResultMethodName,
-  type ProcessWaitMethodName,
   type ResolveResultReturn,
   type ResourceResult,
   type ResultMethodName,
 } from './chargebee-resource.types';
 
 export class ChargebeeResource {
-  protected readonly chargebee = new ChargeBee();
+  protected readonly chargebee: Chargebee;
 
-  constructor(protected readonly options: ChargebeeModuleOptions) {}
+  constructor(protected readonly options: ChargebeeModuleOptions) {
+    this.chargebee = createChargebee(options);
+  }
 
   protected request<
-    TResourceName extends keyof ChargeBee,
-    TMethodName extends keyof ChargeBee[TResourceName],
+    TResourceName extends keyof Chargebee,
+    TMethodName extends keyof Chargebee[TResourceName],
     TReturning extends ResourceResult,
   >(
     resourceName: TResourceName,
-    methodName: TMethodName extends
-      | ResultMethodName<TResourceName, TMethodName>
-      | ProcessWaitMethodName<TResourceName, TMethodName>
-      ? TMethodName
-      : never,
+    methodName: TMethodName extends ResultMethodName<TResourceName, TMethodName> ? TMethodName : never,
     returning: TReturning
   ) {
-    type MethodDefinition = ChargeBee[TResourceName][TMethodName] extends (...args: unknown[]) => RequestWrapper<Result>
-      ? ChargeBee[TResourceName][TMethodName]
+    type MethodDefinition = Chargebee[TResourceName][TMethodName] extends (
+      ...args: any[]
+    ) => Promise<Record<string, unknown>>
+      ? Chargebee[TResourceName][TMethodName]
       : never;
 
-    const functionDef = this.chargebee[resourceName][methodName] as MethodDefinition;
+    const functionDef = this.chargebee[resourceName][methodName] as any;
 
     return async (...args: Parameters<MethodDefinition>) => {
-      configureChargebee(this.chargebee, this.options);
-      return functionDef(...args)
-        .request()
-        .then(this.resolveResult(returning));
+      const result = await (functionDef as (...a: any[]) => Promise<Record<string, unknown>>)(...args);
+      return this.resolveResult(returning)(result);
     };
   }
 
   protected listRequest<
-    TResourceName extends keyof ChargeBee,
-    TMethodName extends keyof ChargeBee[TResourceName],
+    TResourceName extends keyof Chargebee,
+    TMethodName extends keyof Chargebee[TResourceName],
     TReturning extends ResourceResult,
   >(
     resourceName: TResourceName,
     methodName: TMethodName extends ListResultMethodName<TResourceName, TMethodName> ? TMethodName : never,
     returning: TReturning
   ) {
-    type MethodDefinition = ChargeBee[TResourceName][TMethodName] extends (...args: any[]) => RequestWrapper<ListResult>
-      ? ChargeBee[TResourceName][TMethodName]
+    type MethodDefinition = Chargebee[TResourceName][TMethodName] extends (
+      ...args: any[]
+    ) => Promise<{ list: Array<Record<string, unknown>> }>
+      ? Chargebee[TResourceName][TMethodName]
       : never;
 
-    const functionDef = this.chargebee[resourceName][methodName] as MethodDefinition;
+    const functionDef = this.chargebee[resourceName][methodName] as any;
 
     const method = async (...args: Parameters<MethodDefinition>) => {
-      configureChargebee(this.chargebee, this.options);
-      return functionDef(...args)
-        .request()
-        .then((listResult: ListResult) => {
-          const items = listResult.list.map(this.resolveResult(returning));
-          return {
-            items,
-            nextOffset: listResult.next_offset as string | undefined,
-          };
-        });
+      const listResult = await (
+        functionDef as (...a: any[]) => Promise<{ list: Array<Record<string, unknown>>; next_offset?: string }>
+      )(...args);
+      const items = listResult.list.map(this.resolveResult(returning));
+      return {
+        items,
+        nextOffset: listResult.next_offset as string | undefined,
+      };
     };
 
     const iterate = async function* (...args: Parameters<typeof method>) {
@@ -79,7 +73,7 @@ export class ChargebeeResource {
 
       do {
         // eslint-disable-next-line no-loop-func
-        const forwardArgs = args.map((arg) => Object.assign(arg, { offset })) as Parameters<typeof functionDef>;
+        const forwardArgs = args.map((arg) => Object.assign(arg, { offset })) as Parameters<typeof method>;
 
         // eslint-disable-next-line no-await-in-loop
         const listResult = await method(...forwardArgs);
@@ -103,8 +97,6 @@ export class ChargebeeResource {
 
   private resolveResult =
     <TReturning extends ResourceResult>(returning: TReturning) =>
-    (result: Result) =>
-      Object.fromEntries(
-        Object.keys(returning).map((key) => [key, result[key as keyof Result]])
-      ) as ResolveResultReturn<TReturning>;
+    (result: Record<string, unknown>) =>
+      Object.fromEntries(Object.keys(returning).map((key) => [key, result[key]])) as ResolveResultReturn<TReturning>;
 }
