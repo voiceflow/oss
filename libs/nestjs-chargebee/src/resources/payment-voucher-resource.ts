@@ -1,18 +1,19 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class PaymentVoucherResource extends ChargebeeResource {
-  public readonly create = super.request('payment_voucher', 'create', {
+  public readonly create = super.request('paymentVoucher', 'create', {
     payment_voucher: { optional: false },
   });
 
-  public readonly retrieve = super.request('payment_voucher', 'retrieve', {
+  public readonly retrieve = super.request('paymentVoucher', 'retrieve', {
     payment_voucher: { optional: false },
   });
 
-  public readonly paymentVouchersForInvoice = super.listRequest('payment_voucher', 'payment_vouchers_for_invoice', {
+  // eslint-disable-next-line no-secrets/no-secrets
+  public readonly paymentVouchersForInvoice = super.listRequest('paymentVoucher', 'paymentVouchersForInvoice', {
     payment_voucher: { optional: false },
   });
 
-  public readonly paymentVouchersForCustomer = super.listRequest('payment_voucher', 'payment_vouchers_for_customer', {
+  public readonly paymentVouchersForCustomer = super.listRequest('paymentVoucher', 'paymentVouchersForCustomer', {
     payment_voucher: { optional: false },
   });
 }

@@ -4,7 +4,7 @@ export class GiftResource extends ChargebeeResource {
     gift: { optional: false },
   });
 
-  public readonly createForItems = super.request('gift', 'create_for_items', {
+  public readonly createForItems = super.request('gift', 'createForItems', {
     gift: { optional: false },
   });
 
@@ -24,7 +24,7 @@ export class GiftResource extends ChargebeeResource {
     gift: { optional: false },
   });
 
-  public readonly updateGift = super.request('gift', 'update_gift', {
+  public readonly updateGift = super.request('gift', 'updateGift', {
     gift: { optional: false },
   });
 }

@@ -1,18 +1,18 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class TimeMachineResource extends ChargebeeResource {
-  public readonly waitForTimeTravelCompletion = super.request('time_machine', 'wait_for_time_travel_completion', {
+  public readonly waitForTimeTravelCompletion = super.request('timeMachine', 'waitForTimeTravelCompletion', {
     time_machine: { optional: false },
   });
 
-  public readonly retrieve = super.request('time_machine', 'retrieve', {
+  public readonly retrieve = super.request('timeMachine', 'retrieve', {
     time_machine: { optional: false },
   });
 
-  public readonly startAfresh = super.request('time_machine', 'start_afresh', {
+  public readonly startAfresh = super.request('timeMachine', 'startAfresh', {
     time_machine: { optional: false },
   });
 
-  public readonly travelForward = super.request('time_machine', 'travel_forward', {
+  public readonly travelForward = super.request('timeMachine', 'travelForward', {
     time_machine: { optional: false },
   });
 }

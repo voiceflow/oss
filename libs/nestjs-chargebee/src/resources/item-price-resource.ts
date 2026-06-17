@@ -1,30 +1,30 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class ItemPriceResource extends ChargebeeResource {
-  public readonly create = super.request('item_price', 'create', {
+  public readonly create = super.request('itemPrice', 'create', {
     item_price: { optional: false },
   });
 
-  public readonly retrieve = super.request('item_price', 'retrieve', {
+  public readonly retrieve = super.request('itemPrice', 'retrieve', {
     item_price: { optional: false },
   });
 
-  public readonly update = super.request('item_price', 'update', {
+  public readonly update = super.request('itemPrice', 'update', {
     item_price: { optional: false },
   });
 
-  public readonly list = super.listRequest('item_price', 'list', {
+  public readonly list = super.listRequest('itemPrice', 'list', {
     item_price: { optional: false },
   });
 
-  public readonly delete = super.request('item_price', 'delete', {
+  public readonly delete = super.request('itemPrice', 'delete', {
     item_price: { optional: false },
   });
 
-  public readonly findApplicableItems = super.listRequest('item_price', 'find_applicable_items', {
+  public readonly findApplicableItems = super.listRequest('itemPrice', 'findApplicableItems', {
     item: { optional: false },
   });
 
-  public readonly findApplicableItemPrices = super.listRequest('item_price', 'find_applicable_item_prices', {
+  public readonly findApplicableItemPrices = super.listRequest('itemPrice', 'findApplicableItemPrices', {
     item: { optional: false },
   });
 }

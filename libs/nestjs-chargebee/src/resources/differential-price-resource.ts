@@ -1,22 +1,22 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class DifferentialPriceResource extends ChargebeeResource {
-  public readonly create = super.request('differential_price', 'create', {
+  public readonly create = super.request('differentialPrice', 'create', {
     differential_price: { optional: false },
   });
 
-  public readonly retrieve = super.request('differential_price', 'retrieve', {
+  public readonly retrieve = super.request('differentialPrice', 'retrieve', {
     differential_price: { optional: false },
   });
 
-  public readonly update = super.request('differential_price', 'update', {
+  public readonly update = super.request('differentialPrice', 'update', {
     differential_price: { optional: false },
   });
 
-  public readonly delete = super.request('differential_price', 'delete', {
+  public readonly delete = super.request('differentialPrice', 'delete', {
     differential_price: { optional: false },
   });
 
-  public readonly list = super.listRequest('differential_price', 'list', {
+  public readonly list = super.listRequest('differentialPrice', 'list', {
     differential_price: { optional: false },
   });
 }

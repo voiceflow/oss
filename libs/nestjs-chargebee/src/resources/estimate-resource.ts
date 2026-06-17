@@ -1,76 +1,74 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class EstimateResource extends ChargebeeResource {
-  public readonly createSubscription = super.request('estimate', 'create_subscription', {
+  public readonly createSubscription = super.request('estimate', 'createSubscription', {
     estimate: { optional: false },
   });
 
-  public readonly createSubItemEstimate = super.request('estimate', 'create_sub_item_estimate', {
+  public readonly createSubItemEstimate = super.request('estimate', 'createSubItemEstimate', {
     estimate: { optional: false },
   });
 
-  public readonly createSubForCustomerEstimate = super.request('estimate', 'create_sub_for_customer_estimate', {
+  public readonly createSubForCustomerEstimate = super.request('estimate', 'createSubForCustomerEstimate', {
     estimate: { optional: false },
   });
 
-  public readonly createSubItemForCustomerEstimate = super.request(
-    'estimate',
-    'create_sub_item_for_customer_estimate',
-    { estimate: { optional: false } }
-  );
-
-  public readonly updateSubscription = super.request('estimate', 'update_subscription', {
+  public readonly createSubItemForCustomerEstimate = super.request('estimate', 'createSubItemForCustomerEstimate', {
     estimate: { optional: false },
   });
 
-  public readonly updateSubscriptionForItems = super.request('estimate', 'update_subscription_for_items', {
+  public readonly updateSubscription = super.request('estimate', 'updateSubscription', {
     estimate: { optional: false },
   });
 
-  public readonly renewalEstimate = super.request('estimate', 'renewal_estimate', { estimate: { optional: false } });
-
-  public readonly advanceInvoiceEstimate = super.request('estimate', 'advance_invoice_estimate', {
+  public readonly updateSubscriptionForItems = super.request('estimate', 'updateSubscriptionForItems', {
     estimate: { optional: false },
   });
 
-  public readonly regenerateInvoiceEstimate = super.request('estimate', 'regenerate_invoice_estimate', {
+  public readonly renewalEstimate = super.request('estimate', 'renewalEstimate', { estimate: { optional: false } });
+
+  public readonly advanceInvoiceEstimate = super.request('estimate', 'advanceInvoiceEstimate', {
     estimate: { optional: false },
   });
 
-  public readonly upcomingInvoicesEstimate = super.request('estimate', 'upcoming_invoices_estimate', {
+  public readonly regenerateInvoiceEstimate = super.request('estimate', 'regenerateInvoiceEstimate', {
     estimate: { optional: false },
   });
 
-  public readonly changeTermEnd = super.request('estimate', 'change_term_end', {
+  public readonly upcomingInvoicesEstimate = super.request('estimate', 'upcomingInvoicesEstimate', {
     estimate: { optional: false },
   });
 
-  public readonly cancelSubscription = super.request('estimate', 'cancel_subscription', {
+  public readonly changeTermEnd = super.request('estimate', 'changeTermEnd', {
     estimate: { optional: false },
   });
 
-  public readonly cancelSubscriptionForItems = super.request('estimate', 'cancel_subscription_for_items', {
+  public readonly cancelSubscription = super.request('estimate', 'cancelSubscription', {
     estimate: { optional: false },
   });
 
-  public readonly pauseSubscription = super.request('estimate', 'pause_subscription', {
+  public readonly cancelSubscriptionForItems = super.request('estimate', 'cancelSubscriptionForItems', {
     estimate: { optional: false },
   });
 
-  public readonly resumeSubscription = super.request('estimate', 'resume_subscription', {
+  public readonly pauseSubscription = super.request('estimate', 'pauseSubscription', {
     estimate: { optional: false },
   });
 
-  public readonly giftSubscription = super.request('estimate', 'gift_subscription', { estimate: { optional: false } });
-
-  public readonly giftSubscriptionForItems = super.request('estimate', 'gift_subscription_for_items', {
+  public readonly resumeSubscription = super.request('estimate', 'resumeSubscription', {
     estimate: { optional: false },
   });
 
-  public readonly createInvoice = super.request('estimate', 'create_invoice', {
+  public readonly giftSubscription = super.request('estimate', 'giftSubscription', { estimate: { optional: false } });
+
+  public readonly giftSubscriptionForItems = super.request('estimate', 'giftSubscriptionForItems', {
     estimate: { optional: false },
   });
 
-  public readonly createInvoiceForItems = super.request('estimate', 'create_invoice_for_items', {
+  public readonly createInvoice = super.request('estimate', 'createInvoice', {
+    estimate: { optional: false },
+  });
+
+  public readonly createInvoiceForItems = super.request('estimate', 'createInvoiceForItems', {
     estimate: { optional: false },
   });
 }

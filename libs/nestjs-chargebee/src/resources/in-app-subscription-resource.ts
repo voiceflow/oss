@@ -1,18 +1,18 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class InAppSubscriptionResource extends ChargebeeResource {
-  public readonly processReceipt = super.request('in_app_subscription', 'process_receipt', {
+  public readonly processReceipt = super.request('inAppSubscription', 'processReceipt', {
     in_app_subscription: { optional: false },
   });
 
-  public readonly importReceipt = super.request('in_app_subscription', 'import_receipt', {
+  public readonly importReceipt = super.request('inAppSubscription', 'importReceipt', {
     in_app_subscription: { optional: false },
   });
 
-  public readonly importSubscription = super.request('in_app_subscription', 'import_subscription', {
+  public readonly importSubscription = super.request('inAppSubscription', 'importSubscription', {
     in_app_subscription: { optional: false },
   });
 
-  public readonly retrieveStoreSubs = super.request('in_app_subscription', 'retrieve_store_subs', {
+  public readonly retrieveStoreSubs = super.request('inAppSubscription', 'retrieveStoreSubs', {
     in_app_subscription: { optional: false },
   });
 }

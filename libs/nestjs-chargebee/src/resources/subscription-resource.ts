@@ -13,7 +13,7 @@ export class SubscriptionResource extends ChargebeeResource {
     }
   );
 
-  public readonly createForCustomer = super.request('subscription', 'create_for_customer', {
+  public readonly createForCustomer = super.request('subscription', 'createForCustomer', {
     subscription: { optional: false },
     customer: { optional: false },
     card: { optional: true },
@@ -21,7 +21,7 @@ export class SubscriptionResource extends ChargebeeResource {
     unbilled_charges: { optional: true },
   });
 
-  public readonly createWithItems = super.request('subscription', 'create_with_items', {
+  public readonly createWithItems = super.request('subscription', 'createWithItems', {
     subscription: { optional: false },
     customer: { optional: false },
     card: { optional: true },
@@ -35,15 +35,15 @@ export class SubscriptionResource extends ChargebeeResource {
     card: { optional: true },
   });
 
-  public readonly subscriptionsForCustomer = super.listRequest('subscription', 'subscriptions_for_customer', {
+  public readonly subscriptionsForCustomer = super.listRequest('subscription', 'subscriptionsForCustomer', {
     subscription: { optional: false },
   });
 
-  public readonly contractTermsForSubscription = super.listRequest('subscription', 'contract_terms_for_subscription', {
+  public readonly contractTermsForSubscription = super.listRequest('subscription', 'contractTermsForSubscription', {
     contract_term: { optional: false },
   });
 
-  public readonly listDiscounts = super.listRequest('subscription', 'list_discounts', {
+  public readonly listDiscounts = super.listRequest('subscription', 'listDiscounts', {
     discount: { optional: false },
   });
 
@@ -53,26 +53,26 @@ export class SubscriptionResource extends ChargebeeResource {
     card: { optional: true },
   });
 
-  public readonly retrieveWithScheduledChanges = super.request('subscription', 'retrieve_with_scheduled_changes', {
+  public readonly retrieveWithScheduledChanges = super.request('subscription', 'retrieveWithScheduledChanges', {
     subscription: { optional: false },
     customer: { optional: false },
     card: { optional: true },
   });
 
-  public readonly removeScheduledChanges = super.request('subscription', 'remove_scheduled_changes', {
+  public readonly removeScheduledChanges = super.request('subscription', 'removeScheduledChanges', {
     subscription: { optional: false },
     customer: { optional: false },
     card: { optional: true },
     credit_notes: { optional: true },
   });
 
-  public readonly removeScheduledCancellation = super.request('subscription', 'remove_scheduled_cancellation', {
+  public readonly removeScheduledCancellation = super.request('subscription', 'removeScheduledCancellation', {
     subscription: { optional: false },
     customer: { optional: false },
     card: { optional: true },
   });
 
-  public readonly removeCoupons = super.request('subscription', 'remove_coupons', {
+  public readonly removeCoupons = super.request('subscription', 'removeCoupons', {
     subscription: { optional: false },
     customer: { optional: false },
     card: { optional: true },
@@ -87,7 +87,7 @@ export class SubscriptionResource extends ChargebeeResource {
     credit_notes: { optional: true },
   });
 
-  public readonly updateForItems = super.request('subscription', 'update_for_items', {
+  public readonly updateForItems = super.request('subscription', 'updateForItems', {
     subscription: { optional: false },
     customer: { optional: false },
     card: { optional: true },
@@ -96,7 +96,7 @@ export class SubscriptionResource extends ChargebeeResource {
     credit_notes: { optional: true },
   });
 
-  public readonly changeTermEnd = super.request('subscription', 'change_term_end', {
+  public readonly changeTermEnd = super.request('subscription', 'changeTermEnd', {
     subscription: { optional: false },
     customer: { optional: false },
     card: { optional: true },
@@ -113,15 +113,15 @@ export class SubscriptionResource extends ChargebeeResource {
     unbilled_charges: { optional: true },
   });
 
-  public readonly addChargeAtTermEnd = super.request('subscription', 'add_charge_at_term_end', {
+  public readonly addChargeAtTermEnd = super.request('subscription', 'addChargeAtTermEnd', {
     estimate: { optional: false },
   });
 
-  public readonly chargeAddonAtTermEnd = super.request('subscription', 'charge_addon_at_term_end', {
+  public readonly chargeAddonAtTermEnd = super.request('subscription', 'chargeAddonAtTermEnd', {
     estimate: { optional: false },
   });
 
-  public readonly chargeFutureRenewals = super.request('subscription', 'charge_future_renewals', {
+  public readonly chargeFutureRenewals = super.request('subscription', 'chargeFutureRenewals', {
     subscription: { optional: false },
     customer: { optional: false },
     card: { optional: true },
@@ -129,49 +129,49 @@ export class SubscriptionResource extends ChargebeeResource {
     advance_invoice_schedules: { optional: true },
   });
 
-  public readonly editAdvanceInvoiceSchedule = super.request('subscription', 'edit_advance_invoice_schedule', {
+  public readonly editAdvanceInvoiceSchedule = super.request('subscription', 'editAdvanceInvoiceSchedule', {
     advance_invoice_schedules: { optional: false },
   });
 
-  public readonly retrieveAdvanceInvoiceSchedule = super.request('subscription', 'retrieve_advance_invoice_schedule', {
+  public readonly retrieveAdvanceInvoiceSchedule = super.request('subscription', 'retrieveAdvanceInvoiceSchedule', {
     advance_invoice_schedules: { optional: false },
   });
 
-  public readonly removeAdvanceInvoiceSchedule = super.request('subscription', 'remove_advance_invoice_schedule', {
+  public readonly removeAdvanceInvoiceSchedule = super.request('subscription', 'removeAdvanceInvoiceSchedule', {
     subscription: { optional: false },
     advance_invoice_schedules: { optional: true },
   });
 
-  public readonly regenerateInvoice = super.request('subscription', 'regenerate_invoice', {
+  public readonly regenerateInvoice = super.request('subscription', 'regenerateInvoice', {
     invoice: { optional: true },
     unbilled_charges: { optional: true },
   });
 
-  public readonly importSubscription = super.request('subscription', 'import_subscription', {
+  public readonly importSubscription = super.request('subscription', 'importSubscription', {
     subscription: { optional: false },
   });
 
-  public readonly importForCustomer = super.request('subscription', 'import_for_customer', {
+  public readonly importForCustomer = super.request('subscription', 'importForCustomer', {
     subscription: { optional: false },
   });
 
-  public readonly importContractTerm = super.request('subscription', 'import_contract_term', {
+  public readonly importContractTerm = super.request('subscription', 'importContractTerm', {
     contract_term: { optional: false },
   });
 
   // eslint-disable-next-line no-secrets/no-secrets
-  public readonly importUnbilledCharges = super.request('subscription', 'import_unbilled_charges', {
+  public readonly importUnbilledCharges = super.request('subscription', 'importUnbilledCharges', {
     unbilled_charges: { optional: false },
   });
 
-  public readonly importForItems = super.request('subscription', 'import_for_items', {
+  public readonly importForItems = super.request('subscription', 'importForItems', {
     subscription: { optional: false },
     customer: { optional: false },
     card: { optional: true },
     invoice: { optional: true },
   });
 
-  public readonly overrideBillingProfile = super.request('subscription', 'override_billing_profile', {
+  public readonly overrideBillingProfile = super.request('subscription', 'overrideBillingProfile', {
     subscription: { optional: false },
     payment_source: { optional: true },
   });
@@ -200,7 +200,7 @@ export class SubscriptionResource extends ChargebeeResource {
     credit_notes: { optional: true },
   });
 
-  public readonly cancelForItems = super.request('subscription', 'cancel_for_items', {
+  public readonly cancelForItems = super.request('subscription', 'cancelForItems', {
     subscription: { optional: false },
     customer: { optional: false },
     card: { optional: true },
@@ -215,13 +215,13 @@ export class SubscriptionResource extends ChargebeeResource {
     credit_notes: { optional: true },
   });
 
-  public readonly removeScheduledPause = super.request('subscription', 'remove_scheduled_pause', {
+  public readonly removeScheduledPause = super.request('subscription', 'removeScheduledPause', {
     subscription: { optional: false },
     customer: { optional: false },
     card: { optional: true },
   });
 
-  public readonly removeScheduledResumption = super.request('subscription', 'remove_scheduled_resumption', {
+  public readonly removeScheduledResumption = super.request('subscription', 'removeScheduledResumption', {
     subscription: { optional: false },
     customer: { optional: false },
     card: { optional: true },
