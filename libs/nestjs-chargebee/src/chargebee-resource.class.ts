@@ -51,7 +51,7 @@ export class ChargebeeResource {
   ) {
     type MethodDefinition = Chargebee[TResourceName][TMethodName] extends (
       ...args: any[]
-    ) => Promise<{ list: Array<Record<string, unknown>> }>
+    ) => Promise<{ list: Array<unknown> }>
       ? Chargebee[TResourceName][TMethodName]
       : never;
 
