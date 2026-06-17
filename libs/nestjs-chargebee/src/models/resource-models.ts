@@ -1,4 +1,4 @@
-import type * as Resources from 'chargebee-typescript/lib/resources';
+import type * as Resources from 'chargebee';
 
 import type { ResourceModelType } from './resource-model.type';
 
