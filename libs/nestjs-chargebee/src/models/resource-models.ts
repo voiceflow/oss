@@ -4,7 +4,7 @@ import type { ResourceModelType } from './resource-model.type';
 
 /*
 Instructions to update:
-Grab each exported resource from `chargebee` types and use the follow find and replaces:
+Grab each exported resource from `chargebee` types and use the following find and replaces:
 
 Find: export \{ (\w+) as (\w+) \} from .+;
 Replace: export type $2 = ResourceModelType<Resources.$2>;

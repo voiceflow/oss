@@ -69,7 +69,9 @@ export class ChargebeeResource {
 
       do {
         // eslint-disable-next-line no-loop-func
-        const forwardArgs = args.map((arg) => ({ ...arg, offset })) as Parameters<typeof method>;
+        const forwardArgs = args.map((arg) =>
+          arg !== null && typeof arg === 'object' && offset !== undefined ? { ...arg, offset } : arg
+        ) as Parameters<typeof method>;
 
         // eslint-disable-next-line no-await-in-loop
         const listResult = await method(...forwardArgs);
