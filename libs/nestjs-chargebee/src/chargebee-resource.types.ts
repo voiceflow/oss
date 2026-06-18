@@ -25,8 +25,17 @@ export type ListResultMethodName<
 
 export type ResourceResult = Record<string, { optional: boolean }>;
 
-export type ResolveResultReturn<TReturning extends ResourceResult> = {
-  [K in keyof TReturning]: TReturning[K] extends { optional: true } ? unknown | undefined : unknown;
+export type MethodReturnType<
+  TResource extends keyof Chargebee,
+  TMethod extends keyof Chargebee[TResource],
+> = Chargebee[TResource][TMethod] extends (...args: any[]) => Promise<infer R> ? R : never;
+
+export type ResolveResultReturn<TReturning extends ResourceResult, TReturn = Record<string, unknown>> = {
+  [K in keyof TReturning]: K extends keyof TReturn
+    ? TReturning[K] extends { optional: true }
+      ? TReturn[K] | undefined
+      : TReturn[K]
+    : never;
 };
 
 export const isListOffsetOption = (arg: unknown): arg is { offset: string } =>

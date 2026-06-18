@@ -5,6 +5,7 @@ import { createChargebee } from './chargebee.utils';
 import {
   isListOffsetOption,
   type ListResultMethodName,
+  type MethodReturnType,
   type ResolveResultReturn,
   type ResourceResult,
   type ResultMethodName,
@@ -26,17 +27,13 @@ export class ChargebeeResource {
     methodName: TMethodName extends ResultMethodName<TResourceName, TMethodName> ? TMethodName : never,
     returning: TReturning
   ) {
-    type MethodDefinition = Chargebee[TResourceName][TMethodName] extends (
-      ...args: any[]
-    ) => Promise<Record<string, unknown>>
-      ? Chargebee[TResourceName][TMethodName]
-      : never;
+    type MethodReturn = MethodReturnType<TResourceName, TMethodName>;
 
     const functionDef = this.chargebee[resourceName][methodName] as any;
 
-    return async (...args: Parameters<MethodDefinition>) => {
+    return async (...args: any[]): Promise<ResolveResultReturn<TReturning, MethodReturn>> => {
       const result = await (functionDef as (...a: any[]) => Promise<Record<string, unknown>>)(...args);
-      return this.resolveResult(returning)(result);
+      return this.resolveResult(returning)(result) as ResolveResultReturn<TReturning, MethodReturn>;
     };
   }
 
@@ -49,19 +46,18 @@ export class ChargebeeResource {
     methodName: TMethodName extends ListResultMethodName<TResourceName, TMethodName> ? TMethodName : never,
     returning: TReturning
   ) {
-    type MethodDefinition = Chargebee[TResourceName][TMethodName] extends (
-      ...args: any[]
-    ) => Promise<{ list: Array<unknown> }>
-      ? Chargebee[TResourceName][TMethodName]
-      : never;
+    type MethodReturn = MethodReturnType<TResourceName, TMethodName>;
+    type ListItemReturn = MethodReturn extends { list: (infer I)[] } ? I : Record<string, unknown>;
 
     const functionDef = this.chargebee[resourceName][methodName] as any;
 
-    const method = async (...args: Parameters<MethodDefinition>) => {
+    const method = async (...args: any[]) => {
       const listResult = await (
         functionDef as (...a: any[]) => Promise<{ list: Array<unknown>; next_offset?: string }>
       )(...args);
-      const items = (listResult.list as Array<Record<string, unknown>>).map(this.resolveResult(returning));
+      const items = (listResult.list as Array<Record<string, unknown>>).map(
+        this.resolveResult(returning)
+      ) as ResolveResultReturn<TReturning, ListItemReturn>[];
       return {
         items,
         nextOffset: listResult.next_offset as string | undefined,
@@ -83,7 +79,7 @@ export class ChargebeeResource {
     };
 
     const all = async (...args: Parameters<typeof method>) => {
-      const items: ResolveResultReturn<TReturning>[] = [];
+      const items: ResolveResultReturn<TReturning, ListItemReturn>[] = [];
 
       for await (const result of iterate(...args)) {
         items.push(result);
