@@ -1,16 +1,12 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class ExportResource extends ChargebeeResource {
-  public readonly waitForExportCompletion = super.request('export', 'wait_for_export_completion', {
-    download: { optional: false },
-  });
-
   public readonly retrieve = super.request('export', 'retrieve', {
     export: { optional: false },
   });
 
-  public readonly revenueRecognition = super.request('export', 'revenue_recognition', { export: { optional: false } });
+  public readonly revenueRecognition = super.request('export', 'revenueRecognition', { export: { optional: false } });
 
-  public readonly deferredRevenue = super.request('export', 'deferred_revenue', { export: { optional: false } });
+  public readonly deferredRevenue = super.request('export', 'deferredRevenue', { export: { optional: false } });
 
   public readonly plans = super.request('export', 'plans', {
     export: { optional: false },
@@ -36,7 +32,7 @@ export class ExportResource extends ChargebeeResource {
     export: { optional: false },
   });
 
-  public readonly creditNotes = super.request('export', 'credit_notes', {
+  public readonly creditNotes = super.request('export', 'creditNotes', {
     export: { optional: false },
   });
 
@@ -48,7 +44,7 @@ export class ExportResource extends ChargebeeResource {
     export: { optional: false },
   });
 
-  public readonly itemFamilies = super.request('export', 'item_families', {
+  public readonly itemFamilies = super.request('export', 'itemFamilies', {
     export: { optional: false },
   });
 
@@ -56,13 +52,13 @@ export class ExportResource extends ChargebeeResource {
     export: { optional: false },
   });
 
-  public readonly itemPrices = super.request('export', 'item_prices', {
+  public readonly itemPrices = super.request('export', 'itemPrices', {
     export: { optional: false },
   });
 
-  public readonly attachedItems = super.request('export', 'attached_items', {
+  public readonly attachedItems = super.request('export', 'attachedItems', {
     export: { optional: false },
   });
 
-  public readonly differentialPrices = super.request('export', 'differential_prices', { export: { optional: false } });
+  public readonly differentialPrices = super.request('export', 'differentialPrices', { export: { optional: false } });
 }

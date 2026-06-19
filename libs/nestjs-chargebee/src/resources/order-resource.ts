@@ -8,17 +8,17 @@ export class OrderResource extends ChargebeeResource {
     order: { optional: false },
   });
 
-  public readonly importOrder = super.request('order', 'import_order', {
+  public readonly importOrder = super.request('order', 'importOrder', {
     order: { optional: false },
   });
 
-  public readonly assignOrderNumber = super.request('order', 'assign_order_number', { order: { optional: false } });
+  public readonly assignOrderNumber = super.request('order', 'assignOrderNumber', { order: { optional: false } });
 
   public readonly cancel = super.request('order', 'cancel', {
     order: { optional: false },
   });
 
-  public readonly createRefundableCreditNote = super.request('order', 'create_refundable_credit_note', {
+  public readonly createRefundableCreditNote = super.request('order', 'createRefundableCreditNote', {
     order: { optional: false },
   });
 
@@ -38,7 +38,7 @@ export class OrderResource extends ChargebeeResource {
     order: { optional: false },
   });
 
-  public readonly ordersForInvoice = super.listRequest('order', 'orders_for_invoice', { order: { optional: false } });
+  public readonly ordersForInvoice = super.listRequest('order', 'ordersForInvoice', { order: { optional: false } });
 
   public readonly resend = super.request('order', 'resend', {
     order: { optional: false },

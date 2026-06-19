@@ -1,14 +1,14 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class TransactionResource extends ChargebeeResource {
-  public readonly createAuthorization = super.request('transaction', 'create_authorization', {
+  public readonly createAuthorization = super.request('transaction', 'createAuthorization', {
     transaction: { optional: false },
   });
 
-  public readonly voidTransaction = super.request('transaction', 'void_transaction', {
+  public readonly voidTransaction = super.request('transaction', 'voidTransaction', {
     transaction: { optional: false },
   });
 
-  public readonly recordRefund = super.request('transaction', 'record_refund', {
+  public readonly recordRefund = super.request('transaction', 'recordRefund', {
     transaction: { optional: false },
   });
 
@@ -20,15 +20,15 @@ export class TransactionResource extends ChargebeeResource {
     transaction: { optional: false },
   });
 
-  public readonly transactionsForCustomer = super.listRequest('transaction', 'transactions_for_customer', {
+  public readonly transactionsForCustomer = super.listRequest('transaction', 'transactionsForCustomer', {
     transaction: { optional: false },
   });
 
-  public readonly transactionsForSubscription = super.listRequest('transaction', 'transactions_for_subscription', {
+  public readonly transactionsForSubscription = super.listRequest('transaction', 'transactionsForSubscription', {
     transaction: { optional: false },
   });
 
-  public readonly paymentsForInvoice = super.listRequest('transaction', 'payments_for_invoice', {
+  public readonly paymentsForInvoice = super.listRequest('transaction', 'paymentsForInvoice', {
     transaction: { optional: false },
   });
 
@@ -36,7 +36,7 @@ export class TransactionResource extends ChargebeeResource {
     transaction: { optional: false },
   });
 
-  public readonly deleteOfflineTransaction = super.request('transaction', 'delete_offline_transaction', {
+  public readonly deleteOfflineTransaction = super.request('transaction', 'deleteOfflineTransaction', {
     transaction: { optional: false },
   });
 }

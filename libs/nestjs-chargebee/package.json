@@ -39,7 +39,7 @@
     "test:unused": "yarn g:knip --workspace @voiceflow/nestjs-chargebee"
   },
   "dependencies": {
-    "chargebee-typescript": "2.44.0"
+    "chargebee": "3.26.0"
   },
   "devDependencies": {
     "@nestjs/common": "10.1.3",

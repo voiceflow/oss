@@ -4,11 +4,11 @@ export class CouponResource extends ChargebeeResource {
     coupon: { optional: false },
   });
 
-  public readonly createForItems = super.request('coupon', 'create_for_items', {
+  public readonly createForItems = super.request('coupon', 'createForItems', {
     coupon: { optional: false },
   });
 
-  public readonly updateForItems = super.request('coupon', 'update_for_items', {
+  public readonly updateForItems = super.request('coupon', 'updateForItems', {
     coupon: { optional: false },
   });
 

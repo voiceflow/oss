@@ -5,21 +5,21 @@ export class CardResource extends ChargebeeResource {
     card: { optional: false },
   });
 
-  public readonly updateCardForCustomer = super.request('card', 'update_card_for_customer', {
+  public readonly updateCardForCustomer = super.request('card', 'updateCardForCustomer', {
     card: { optional: false },
     customer: { optional: false },
   });
 
-  public readonly switchGatewayForCustomer = super.request('card', 'switch_gateway_for_customer', {
+  public readonly switchGatewayForCustomer = super.request('card', 'switchGatewayForCustomer', {
     card: { optional: false },
     customer: { optional: false },
   });
 
-  public readonly copyCardForCustomer = super.request('card', 'copy_card_for_customer', {
+  public readonly copyCardForCustomer = super.request('card', 'copyCardForCustomer', {
     third_party_payment_method: { optional: false },
   });
 
-  public readonly deleteCardForCustomer = super.request('card', 'delete_card_for_customer', {
+  public readonly deleteCardForCustomer = super.request('card', 'deleteCardForCustomer', {
     customer: { optional: false },
   });
 }

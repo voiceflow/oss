@@ -1,26 +1,26 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class UnbilledChargeResource extends ChargebeeResource {
-  public readonly createUnbilledCharge = super.request('unbilled_charge', 'create_unbilled_charge', {
+  public readonly createUnbilledCharge = super.request('unbilledCharge', 'createUnbilledCharge', {
     unbilled_charge: { optional: false },
   });
 
-  public readonly create = super.request('unbilled_charge', 'create', {
+  public readonly create = super.request('unbilledCharge', 'create', {
     unbilled_charge: { optional: false },
   });
 
-  public readonly invoiceUnbilledCharges = super.request('unbilled_charge', 'invoice_unbilled_charges', {
+  public readonly invoiceUnbilledCharges = super.request('unbilledCharge', 'invoiceUnbilledCharges', {
     unbilled_charge: { optional: false },
   });
 
-  public readonly delete = super.request('unbilled_charge', 'delete', {
+  public readonly delete = super.request('unbilledCharge', 'delete', {
     unbilled_charge: { optional: false },
   });
 
-  public readonly list = super.listRequest('unbilled_charge', 'list', {
+  public readonly list = super.listRequest('unbilledCharge', 'list', {
     unbilled_charge: { optional: false },
   });
 
-  public readonly invoiceNowEstimate = super.request('unbilled_charge', 'invoice_now_estimate', {
+  public readonly invoiceNowEstimate = super.request('unbilledCharge', 'invoiceNowEstimate', {
     unbilled_charge: { optional: false },
   });
 }

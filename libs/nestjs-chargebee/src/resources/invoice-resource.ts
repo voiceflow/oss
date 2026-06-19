@@ -4,7 +4,7 @@ export class InvoiceResource extends ChargebeeResource {
     invoice: { optional: false },
   });
 
-  public readonly createForChargeItemsAndCharges = super.request('invoice', 'create_for_charge_items_and_charges', {
+  public readonly createForChargeItemsAndCharges = super.request('invoice', 'createForChargeItemsAndCharges', {
     invoice: { optional: false },
   });
 
@@ -12,33 +12,33 @@ export class InvoiceResource extends ChargebeeResource {
     invoice: { optional: false },
   });
 
-  public readonly chargeAddon = super.request('invoice', 'charge_addon', {
+  public readonly chargeAddon = super.request('invoice', 'chargeAddon', {
     invoice: { optional: false },
   });
 
-  public readonly createForChargeItem = super.request('invoice', 'create_for_charge_item', {
+  public readonly createForChargeItem = super.request('invoice', 'createForChargeItem', {
     invoice: { optional: false },
   });
 
-  public readonly stopDunning = super.request('invoice', 'stop_dunning', {
+  public readonly stopDunning = super.request('invoice', 'stopDunning', {
     invoice: { optional: false },
   });
 
-  public readonly importInvoice = super.request('invoice', 'import_invoice', {
+  public readonly importInvoice = super.request('invoice', 'importInvoice', {
     invoice: { optional: false },
   });
 
-  public readonly applyPayments = super.request('invoice', 'apply_payments', {
+  public readonly applyPayments = super.request('invoice', 'applyPayments', {
     invoice: { optional: false },
   });
 
-  public readonly syncUsages = super.request('invoice', 'sync_usages', {
+  public readonly syncUsages = super.request('invoice', 'syncUsages', {
     invoice: { optional: false },
   });
 
-  public readonly deleteLineItems = super.request('invoice', 'delete_line_items', { invoice: { optional: false } });
+  public readonly deleteLineItems = super.request('invoice', 'deleteLineItems', { invoice: { optional: false } });
 
-  public readonly applyCredits = super.request('invoice', 'apply_credits', {
+  public readonly applyCredits = super.request('invoice', 'applyCredits', {
     invoice: { optional: false },
   });
 
@@ -46,11 +46,11 @@ export class InvoiceResource extends ChargebeeResource {
     invoice: { optional: false },
   });
 
-  public readonly invoicesForCustomer = super.listRequest('invoice', 'invoices_for_customer', {
+  public readonly invoicesForCustomer = super.listRequest('invoice', 'invoicesForCustomer', {
     invoice: { optional: false },
   });
 
-  public readonly invoicesForSubscription = super.listRequest('invoice', 'invoices_for_subscription', {
+  public readonly invoicesForSubscription = super.listRequest('invoice', 'invoicesForSubscription', {
     invoice: { optional: false },
   });
 
@@ -62,19 +62,19 @@ export class InvoiceResource extends ChargebeeResource {
     download: { optional: false },
   });
 
-  public readonly downloadEinvoice = super.request('invoice', 'download_einvoice', { invoice: { optional: false } });
+  public readonly downloadEinvoice = super.request('invoice', 'downloadEinvoice', { invoice: { optional: false } });
 
-  public readonly listPaymentReferenceNumbers = super.listRequest('invoice', 'list_payment_reference_numbers', {
+  public readonly listPaymentReferenceNumbers = super.listRequest('invoice', 'listPaymentReferenceNumbers', {
     invoice: { optional: false },
   });
 
-  public readonly addCharge = super.request('invoice', 'add_charge', {
+  public readonly addCharge = super.request('invoice', 'addCharge', {
     invoice: { optional: false },
   });
 
-  public readonly addAddonCharge = super.request('invoice', 'add_addon_charge', { invoice: { optional: false } });
+  public readonly addAddonCharge = super.request('invoice', 'addAddonCharge', { invoice: { optional: false } });
 
-  public readonly addChargeItem = super.request('invoice', 'add_charge_item', {
+  public readonly addChargeItem = super.request('invoice', 'addChargeItem', {
     invoice: { optional: false },
   });
 
@@ -82,37 +82,37 @@ export class InvoiceResource extends ChargebeeResource {
     invoice: { optional: false },
   });
 
-  public readonly collectPayment = super.request('invoice', 'collect_payment', {
+  public readonly collectPayment = super.request('invoice', 'collectPayment', {
     invoice: { optional: false },
   });
 
-  public readonly recordPayment = super.request('invoice', 'record_payment', {
+  public readonly recordPayment = super.request('invoice', 'recordPayment', {
     invoice: { optional: false },
   });
 
-  public readonly recordTaxWithheld = super.request('invoice', 'record_tax_withheld', { invoice: { optional: false } });
+  public readonly recordTaxWithheld = super.request('invoice', 'recordTaxWithheld', { invoice: { optional: false } });
 
-  public readonly removeTaxWithheld = super.request('invoice', 'remove_tax_withheld', { invoice: { optional: false } });
+  public readonly removeTaxWithheld = super.request('invoice', 'removeTaxWithheld', { invoice: { optional: false } });
 
   public readonly refund = super.request('invoice', 'refund', {
     invoice: { optional: false },
   });
 
-  public readonly recordRefund = super.request('invoice', 'record_refund', {
+  public readonly recordRefund = super.request('invoice', 'recordRefund', {
     invoice: { optional: false },
   });
 
-  public readonly removePayment = super.request('invoice', 'remove_payment', {
+  public readonly removePayment = super.request('invoice', 'removePayment', {
     invoice: { optional: false },
   });
 
-  public readonly removeCreditNote = super.request('invoice', 'remove_credit_note', { invoice: { optional: false } });
+  public readonly removeCreditNote = super.request('invoice', 'removeCreditNote', { invoice: { optional: false } });
 
-  public readonly voidInvoice = super.request('invoice', 'void_invoice', {
+  public readonly voidInvoice = super.request('invoice', 'voidInvoice', {
     invoice: { optional: false },
   });
 
-  public readonly writeOff = super.request('invoice', 'write_off', {
+  public readonly writeOff = super.request('invoice', 'writeOff', {
     invoice: { optional: false },
   });
 
@@ -120,15 +120,15 @@ export class InvoiceResource extends ChargebeeResource {
     invoice: { optional: false },
   });
 
-  public readonly updateDetails = super.request('invoice', 'update_details', {
+  public readonly updateDetails = super.request('invoice', 'updateDetails', {
     invoice: { optional: false },
   });
 
-  public readonly resendEinvoice = super.request('invoice', 'resend_einvoice', {
+  public readonly resendEinvoice = super.request('invoice', 'resendEinvoice', {
     invoice: { optional: false },
   });
 
-  public readonly sendEinvoice = super.request('invoice', 'send_einvoice', {
+  public readonly sendEinvoice = super.request('invoice', 'sendEinvoice', {
     invoice: { optional: false },
   });
 }

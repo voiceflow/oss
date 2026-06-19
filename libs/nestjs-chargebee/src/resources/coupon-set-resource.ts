@@ -1,28 +1,28 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class CouponSetResource extends ChargebeeResource {
-  public readonly create = super.request('coupon_set', 'create', {
+  public readonly create = super.request('couponSet', 'create', {
     coupon_set: { optional: false },
   });
 
-  public readonly addCouponCodes = super.request('coupon_set', 'add_coupon_codes', { coupon_set: { optional: false } });
+  public readonly addCouponCodes = super.request('couponSet', 'addCouponCodes', { coupon_set: { optional: false } });
 
-  public readonly list = super.listRequest('coupon_set', 'list', {
+  public readonly list = super.listRequest('couponSet', 'list', {
     coupon_set: { optional: false },
   });
 
-  public readonly retrieve = super.request('coupon_set', 'retrieve', {
+  public readonly retrieve = super.request('couponSet', 'retrieve', {
     coupon_set: { optional: false },
   });
 
-  public readonly update = super.request('coupon_set', 'update', {
+  public readonly update = super.request('couponSet', 'update', {
     coupon_set: { optional: false },
   });
 
-  public readonly delete = super.request('coupon_set', 'delete', {
+  public readonly delete = super.request('couponSet', 'delete', {
     coupon_set: { optional: false },
   });
 
-  public readonly deleteUnusedCouponCodes = super.request('coupon_set', 'delete_unused_coupon_codes', {
+  public readonly deleteUnusedCouponCodes = super.request('couponSet', 'deleteUnusedCouponCodes', {
     coupon_set: { optional: false },
   });
 }

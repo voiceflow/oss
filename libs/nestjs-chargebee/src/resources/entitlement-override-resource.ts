@@ -1,14 +1,15 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class EntitlementOverrideResource extends ChargebeeResource {
-  public readonly addEntitlementOverrideForSubscription = super.request(
-    'entitlement_override',
-    'add_entitlement_override_for_subscription',
+  public readonly addEntitlementOverrideForSubscription = super.listRequest(
+    'entitlementOverride',
+    // eslint-disable-next-line no-secrets/no-secrets
+    'addEntitlementOverrideForSubscription',
     { entitlement_override: { optional: false } }
   );
 
   public readonly listEntitlementOverrideForSubscription = super.listRequest(
-    'entitlement_override',
-    'list_entitlement_override_for_subscription',
+    'entitlementOverride',
+    'listEntitlementOverrideForSubscription',
     { entitlement_override: { optional: false } }
   );
 }

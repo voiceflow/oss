@@ -1,77 +1,77 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class PaymentSourceResource extends ChargebeeResource {
-  public readonly createUsingTempToken = super.request('payment_source', 'create_using_temp_token', {
+  public readonly createUsingTempToken = super.request('paymentSource', 'createUsingTempToken', {
     payment_source: { optional: false },
     customer: { optional: false },
   });
 
-  public readonly createUsingPermanentToken = super.request('payment_source', 'create_using_permanent_token', {
+  public readonly createUsingPermanentToken = super.request('paymentSource', 'createUsingPermanentToken', {
     payment_source: { optional: false },
     customer: { optional: false },
   });
 
-  public readonly createUsingToken = super.request('payment_source', 'create_using_token', {
+  public readonly createUsingToken = super.request('paymentSource', 'createUsingToken', {
     payment_source: { optional: false },
     customer: { optional: false },
   });
 
-  public readonly createUsingPaymentIntent = super.request('payment_source', 'create_using_payment_intent', {
+  public readonly createUsingPaymentIntent = super.request('paymentSource', 'createUsingPaymentIntent', {
     payment_source: { optional: false },
     customer: { optional: false },
   });
 
-  public readonly createVoucherPaymentSource = super.request('payment_source', 'create_voucher_payment_source', {
+  public readonly createVoucherPaymentSource = super.request('paymentSource', 'createVoucherPaymentSource', {
     payment_source: { optional: false },
     customer: { optional: false },
   });
 
-  public readonly createCard = super.request('payment_source', 'create_card', {
+  public readonly createCard = super.request('paymentSource', 'createCard', {
     payment_source: { optional: false },
     customer: { optional: false },
   });
 
-  public readonly createBankAccount = super.request('payment_source', 'create_bank_account', {
+  public readonly createBankAccount = super.request('paymentSource', 'createBankAccount', {
     payment_source: { optional: false },
     customer: { optional: false },
   });
 
-  public readonly updateCard = super.request('payment_source', 'update_card', {
+  public readonly updateCard = super.request('paymentSource', 'updateCard', {
     payment_source: { optional: false },
     customer: { optional: false },
   });
 
-  public readonly updateBankAccount = super.request('payment_source', 'update_bank_account', {
+  public readonly updateBankAccount = super.request('paymentSource', 'updateBankAccount', {
     payment_source: { optional: false },
     customer: { optional: false },
   });
 
-  public readonly verifyBankAccount = super.request('payment_source', 'verify_bank_account', {
+  public readonly verifyBankAccount = super.request('paymentSource', 'verifyBankAccount', {
     payment_source: { optional: false },
   });
 
-  public readonly retrieve = super.request('payment_source', 'retrieve', {
+  public readonly retrieve = super.request('paymentSource', 'retrieve', {
     payment_source: { optional: false },
   });
 
-  public readonly list = super.listRequest('payment_source', 'list', {
+  public readonly list = super.listRequest('paymentSource', 'list', {
     payment_source: { optional: false },
   });
 
-  public readonly switchGatewayAccount = super.request('payment_source', 'switch_gateway_account', {
+  public readonly switchGatewayAccount = super.request('paymentSource', 'switchGatewayAccount', {
     payment_source: { optional: false },
     customer: { optional: false },
   });
 
-  public readonly exportPaymentSource = super.request('payment_source', 'export_payment_source', {
+  public readonly exportPaymentSource = super.request('paymentSource', 'exportPaymentSource', {
     third_party_payment_method: { optional: false },
   });
 
-  public readonly delete = super.request('payment_source', 'delete', {
+  public readonly delete = super.request('paymentSource', 'delete', {
     payment_source: { optional: false },
     customer: { optional: false },
   });
 
-  public readonly deleteLocal = super.request('payment_source', 'delete_local', {
+  public readonly deleteLocal = super.request('paymentSource', 'deleteLocal', {
     payment_source: { optional: false },
     customer: { optional: false },
   });

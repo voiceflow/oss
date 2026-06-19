@@ -1,6 +1,6 @@
 import { ChargebeeResource } from '../chargebee-resource.class';
 export class EntitlementResource extends ChargebeeResource {
-  public readonly create = super.request('entitlement', 'create', {
+  public readonly create = super.listRequest('entitlement', 'create', {
     entitlement: { optional: false },
   });
 
