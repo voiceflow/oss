@@ -5,7 +5,7 @@ import type { ChargebeeModuleOptions } from './chargebee.interface';
 
 export function createChargebee(options: ChargebeeModuleOptions): Chargebee {
   const config: Config = {
-    site: options.site,
+    site: options.override?.url ? '' : options.site,
     apiKey: options.apiKey,
     ...(options.override?.url ? extractURLOptions(options.override.url) : {}),
     ...(options.override?.timeout ? { timeout: options.override.timeout } : {}),
