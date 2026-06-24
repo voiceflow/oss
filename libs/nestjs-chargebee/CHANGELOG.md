@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2](https://github.com/voiceflow/oss/compare/@voiceflow/nestjs-chargebee@2.2.1...@voiceflow/nestjs-chargebee@2.2.2) (2026-06-24)
+
+### Bug Fixes
+
+* reduce mem comsumption (COR-12375) ([#31](https://github.com/voiceflow/oss/issues/31)) ([579e6a4](https://github.com/voiceflow/oss/commit/579e6a48f85abdc09019179ef78a51f4679c788b))
+
 ## [2.2.1](https://github.com/voiceflow/oss/compare/@voiceflow/nestjs-chargebee@2.2.0...@voiceflow/nestjs-chargebee@2.2.1) (2026-06-24)
 
 ### Bug Fixes
