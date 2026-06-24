@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/voiceflow/oss/compare/@voiceflow/nestjs-chargebee@2.2.0...@voiceflow/nestjs-chargebee@2.2.1) (2026-06-24)
+
+### Bug Fixes
+
+* override site (COR-12375) ([#29](https://github.com/voiceflow/oss/issues/29)) ([324131f](https://github.com/voiceflow/oss/commit/324131fa7806b869e77839c278e86d3db8bbf8ac))
+
 # [2.2.0](https://github.com/voiceflow/oss/compare/@voiceflow/nestjs-chargebee@2.1.2...@voiceflow/nestjs-chargebee@2.2.0) (2026-06-19)
 
 ### Features
