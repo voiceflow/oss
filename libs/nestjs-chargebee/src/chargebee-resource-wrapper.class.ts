@@ -1,4 +1,5 @@
 import type { ChargebeeModuleOptions } from './chargebee.interface';
+import { createChargebee } from './chargebee.utils';
 import { AddonResource } from './resources/addon-resource';
 import { AddressResource } from './resources/address-resource';
 import { AttachedItemResource } from './resources/attached-item-resource';
@@ -45,93 +46,95 @@ import { UsageResource } from './resources/usage-resource';
 import { VirtualBankAccountResource } from './resources/virtual-bank-account-resource';
 
 export class ChargebeeResourceWrapper {
+  private readonly client = createChargebee(this.options);
+
   constructor(private readonly options: ChargebeeModuleOptions) {}
 
-  subscription = new SubscriptionResource(this.options);
+  subscription = new SubscriptionResource(this.client);
 
-  customer = new CustomerResource(this.options);
+  customer = new CustomerResource(this.client);
 
-  paymentSource = new PaymentSourceResource(this.options);
+  paymentSource = new PaymentSourceResource(this.client);
 
-  virtualBankAccount = new VirtualBankAccountResource(this.options);
+  virtualBankAccount = new VirtualBankAccountResource(this.client);
 
-  card = new CardResource(this.options);
+  card = new CardResource(this.client);
 
-  promotionalCredit = new PromotionalCreditResource(this.options);
+  promotionalCredit = new PromotionalCreditResource(this.client);
 
-  invoice = new InvoiceResource(this.options);
+  invoice = new InvoiceResource(this.client);
 
-  creditNote = new CreditNoteResource(this.options);
+  creditNote = new CreditNoteResource(this.client);
 
-  unbilledCharge = new UnbilledChargeResource(this.options);
+  unbilledCharge = new UnbilledChargeResource(this.client);
 
-  order = new OrderResource(this.options);
+  order = new OrderResource(this.client);
 
-  gift = new GiftResource(this.options);
+  gift = new GiftResource(this.client);
 
-  transaction = new TransactionResource(this.options);
+  transaction = new TransactionResource(this.client);
 
-  hostedPage = new HostedPageResource(this.options);
+  hostedPage = new HostedPageResource(this.client);
 
-  estimate = new EstimateResource(this.options);
+  estimate = new EstimateResource(this.client);
 
-  quote = new QuoteResource(this.options);
+  quote = new QuoteResource(this.client);
 
-  plan = new PlanResource(this.options);
+  plan = new PlanResource(this.client);
 
-  addon = new AddonResource(this.options);
+  addon = new AddonResource(this.client);
 
-  coupon = new CouponResource(this.options);
+  coupon = new CouponResource(this.client);
 
-  couponSet = new CouponSetResource(this.options);
+  couponSet = new CouponSetResource(this.client);
 
-  couponCode = new CouponCodeResource(this.options);
+  couponCode = new CouponCodeResource(this.client);
 
-  address = new AddressResource(this.options);
+  address = new AddressResource(this.client);
 
-  usage = new UsageResource(this.options);
+  usage = new UsageResource(this.client);
 
-  comment = new CommentResource(this.options);
+  comment = new CommentResource(this.client);
 
-  portalSession = new PortalSessionResource(this.options);
+  portalSession = new PortalSessionResource(this.client);
 
-  siteMigrationDetail = new SiteMigrationDetailResource(this.options);
+  siteMigrationDetail = new SiteMigrationDetailResource(this.client);
 
-  resourceMigration = new ResourceMigrationResource(this.options);
+  resourceMigration = new ResourceMigrationResource(this.client);
 
-  timeMachine = new TimeMachineResource(this.options);
+  timeMachine = new TimeMachineResource(this.client);
 
-  export = new ExportResource(this.options);
+  export = new ExportResource(this.client);
 
-  paymentIntent = new PaymentIntentResource(this.options);
+  paymentIntent = new PaymentIntentResource(this.client);
 
-  itemFamily = new ItemFamilyResource(this.options);
+  itemFamily = new ItemFamilyResource(this.client);
 
-  item = new ItemResource(this.options);
+  item = new ItemResource(this.client);
 
-  itemPrice = new ItemPriceResource(this.options);
+  itemPrice = new ItemPriceResource(this.client);
 
-  attachedItem = new AttachedItemResource(this.options);
+  attachedItem = new AttachedItemResource(this.client);
 
-  differentialPrice = new DifferentialPriceResource(this.options);
+  differentialPrice = new DifferentialPriceResource(this.client);
 
-  feature = new FeatureResource(this.options);
+  feature = new FeatureResource(this.client);
 
-  subscriptionEntitlement = new SubscriptionEntitlementResource(this.options);
+  subscriptionEntitlement = new SubscriptionEntitlementResource(this.client);
 
-  itemEntitlement = new ItemEntitlementResource(this.options);
+  itemEntitlement = new ItemEntitlementResource(this.client);
 
-  inAppSubscription = new InAppSubscriptionResource(this.options);
+  inAppSubscription = new InAppSubscriptionResource(this.client);
 
-  nonSubscription = new NonSubscriptionResource(this.options);
+  nonSubscription = new NonSubscriptionResource(this.client);
 
-  entitlement = new EntitlementResource(this.options);
+  entitlement = new EntitlementResource(this.client);
 
-  entitlementOverride = new EntitlementOverrideResource(this.options);
+  entitlementOverride = new EntitlementOverrideResource(this.client);
 
-  purchase = new PurchaseResource(this.options);
+  purchase = new PurchaseResource(this.client);
 
-  paymentVoucher = new PaymentVoucherResource(this.options);
+  paymentVoucher = new PaymentVoucherResource(this.client);
 
-  download = new DownloadResource(this.options);
+  download = new DownloadResource(this.client);
 }

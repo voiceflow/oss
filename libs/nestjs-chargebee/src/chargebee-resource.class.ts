@@ -1,7 +1,5 @@
 import type Chargebee from 'chargebee';
 
-import type { ChargebeeModuleOptions } from './chargebee.interface';
-import { createChargebee } from './chargebee.utils';
 import {
   isListOffsetOption,
   type ListResultMethodName,
@@ -12,11 +10,7 @@ import {
 } from './chargebee-resource.types';
 
 export class ChargebeeResource {
-  protected readonly chargebee: Chargebee;
-
-  constructor(protected readonly options: ChargebeeModuleOptions) {
-    this.chargebee = createChargebee(options);
-  }
+  constructor(protected readonly chargebee: Chargebee) {}
 
   protected request<
     TResourceName extends keyof Chargebee,
