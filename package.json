@@ -75,7 +75,7 @@
     "rimraf": "6.1.2",
     "source-map-support": "0.5.21",
     "tsc-alias": "1.8.16",
-    "turbo": "1.13.4",
+    "turbo": "2.9.14",
     "typescript": "5.9.3",
     "vitest": "4.0.12"
   },
