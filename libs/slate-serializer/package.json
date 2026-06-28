@@ -78,14 +78,14 @@
   },
   "devDependencies": {
     "@types/react": "18.2.4",
-    "@voiceflow/dtos-interact": "1.17.1",
+    "@voiceflow/dtos-interact": "2.11.0",
     "csstype": "3.2.3",
     "react": "18.2.0",
     "slate": "0.94.1",
     "zod": "3.22.4"
   },
   "peerDependencies": {
-    "@voiceflow/dtos-interact": "^1.17.1",
+    "@voiceflow/dtos-interact": "^1.17.1 || ^2.0.0",
     "csstype": "^3.2.3",
     "react": "^17.0.2",
     "slate": "^0.72.3",
