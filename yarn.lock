@@ -2008,12 +2008,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@voiceflow/dtos-interact@npm:1.17.1":
-  version: 1.17.1
-  resolution: "@voiceflow/dtos-interact@npm:1.17.1"
+"@voiceflow/dtos-interact@npm:2.21.0":
+  version: 2.21.0
+  resolution: "@voiceflow/dtos-interact@npm:2.21.0"
   peerDependencies:
-    zod: ^3
-  checksum: 24866c5b249a6c7fc27eec6ba580b397ffd71ce5322d1257b3d1f8fc6671daad83621e714578459c165478271059fa703dbf3f4c397d133ca90533056921b1f0
+    zod: ^4
+  checksum: 587c81c0fd64da50f607a8ce351108e854b2ae5ae24809ef3842135e559f60ccfacdf26dc76e127de9840189cf3caf08d9c277306c8465976490d9c292fc9017
   languageName: node
   linkType: hard
 
@@ -2134,13 +2134,13 @@ __metadata:
   resolution: "@voiceflow/slate-serializer@workspace:libs/slate-serializer"
   dependencies:
     "@types/react": 18.2.4
-    "@voiceflow/dtos-interact": 1.17.1
+    "@voiceflow/dtos-interact": 2.21.0
     csstype: 3.2.3
     react: 18.2.0
     slate: 0.94.1
     zod: 3.22.4
   peerDependencies:
-    "@voiceflow/dtos-interact": ^1.17.1
+    "@voiceflow/dtos-interact": ^1.17.1 || ^2.0.0
     csstype: ^3.2.3
     react: ^17.0.2
     slate: ^0.72.3
