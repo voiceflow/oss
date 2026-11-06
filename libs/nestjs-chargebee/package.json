@@ -6,28 +6,17 @@
     "url": "git+https://github.com/voiceflow/oss.git"
   },
   "license": "MIT",
+  "type": "module",
   "exports": {
-    ".": {
-      "types": "./build/esm/main.d.ts",
-      "import": "./build/esm/main.js",
-      "default": "./build/cjs/main.js"
-    },
-    "./models": {
-      "types": "./build/esm/models/mod.d.ts",
-      "import": "./build/esm/models/mod.js",
-      "default": "./build/cjs/models/mod.js"
-    }
+    ".": "./build/index.mjs",
+    "./models": "./build/models.mjs"
   },
-  "main": "build/cjs/main.js",
-  "types": "build/esm/main.d.ts",
   "files": [
     "build"
   ],
   "scripts": {
     "build": "yarn g:turbo run build:cmd --filter=@voiceflow/nestjs-chargebee...",
-    "build:cjs": "yarn g:build:pkg cjs",
-    "build:cmd": "yarn g:run-p build:cjs build:esm",
-    "build:esm": "yarn g:build:pkg esm",
+    "build:cmd": "yarn g:tsdown",
     "clean": "yarn g:rimraf build",
     "lint": "yarn g:run-p -c lint:eslint lint:prettier",
     "lint:eslint": "yarn g:eslint",

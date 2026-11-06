@@ -4,6 +4,8 @@ import type { KnipConfig } from 'knip';
 const config: KnipConfig = {
   ...baseConfig,
 
+  tsdown: true,
+
   workspaces: {
     '.': {
       project: ['!.yarn'],
@@ -12,10 +14,6 @@ const config: KnipConfig = {
 
     'libs/nestjs-chargebee': {
       ignoreDependencies: ['@nestjs/core'],
-    },
-
-    'libs/slate-serializer': {
-      entry: ['src/index.ts', 'src/serializers/jsx.tsx', 'src/serializers/markdown.ts', 'src/serializers/text.ts'],
     },
 
     'libs/universal-mock': {

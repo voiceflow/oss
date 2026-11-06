@@ -21,14 +21,15 @@
   "license": "ISC",
   "author": "Tyler Han, Ben Teichman",
   "type": "module",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "exports": {
+    ".": "./build/index.mjs"
+  },
   "files": [
     "build"
   ],
   "scripts": {
     "build": "yarn g:turbo run build:cmd --filter=@voiceflow/composite-reducer...",
-    "build:cmd": "yarn g:build:pkg",
+    "build:cmd": "yarn g:tsdown",
     "clean": "yarn g:rimraf build",
     "lint": "yarn g:run-p -c lint:eslint lint:prettier",
     "lint:eslint": "yarn g:eslint",
