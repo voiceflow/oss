@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/voiceflow/oss/compare/@voiceflow/nestjs-chargebee@2.2.2...@voiceflow/nestjs-chargebee@3.0.0) (2026-11-06)
+
+### Features
+
+* upgrade to node 26, yarn 4 and dpdm 4 (ENG-1048) ([#35](https://github.com/voiceflow/oss/issues/35)) ([42ae306](https://github.com/voiceflow/oss/commit/42ae306fa060e0610585a0407db94a4bd4615f67))
+
+### BREAKING CHANGES
+
+* requires Node 26
+
 ## [2.2.2](https://github.com/voiceflow/oss/compare/@voiceflow/nestjs-chargebee@2.2.1...@voiceflow/nestjs-chargebee@2.2.2) (2026-06-24)
 
 ### Bug Fixes
