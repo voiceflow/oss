@@ -65,7 +65,7 @@
     "@voiceflow/tsconfig": "1.13.1",
     "@voiceflow/vitest-config": "1.12.0",
     "check-dependency-version-consistency": "5.0.1",
-    "dpdm-fast": "1.0.14",
+    "dpdm": "3.14.0",
     "eslint": "9.39.2",
     "knip": "5.85.0",
     "lint-staged": "16.2.7",

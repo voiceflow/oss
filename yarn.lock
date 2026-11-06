@@ -3681,20 +3681,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dpdm-fast@npm:1.0.14":
-  version: 1.0.14
-  resolution: "dpdm-fast@npm:1.0.14"
+"dpdm@npm:3.14.0":
+  version: 3.14.0
+  resolution: "dpdm@npm:3.14.0"
   dependencies:
     chalk: ^4.1.2
-    fs-extra: ^11.2.0
-    glob: ^10.3.10
+    fs-extra: ^11.1.1
+    glob: ^10.3.4
     ora: ^5.4.1
-    tslib: ^2.7.0
-    typescript: ^5.6.3
+    tslib: ^2.6.2
+    typescript: ^5.2.2
     yargs: ^17.7.2
   bin:
-    dpdm: scripts/dpdm.js
-  checksum: d8f2ea0b7c020328cbbe28c358c31c1a2d470986c55ecc55f3af9bcba44b283f932de4dca42c4473e8a3fcb6a20e1ff1a84def740ad27cd9e16b2eeadeba2ab2
+    dpdm: lib/bin/dpdm.js
+  checksum: 86870216326db1b5d714d8297271e7cbafb0bb4e4e60b7c8eeffd22cab8cf8a1464b66db5ce62a4ba9ddb4efdba25b7903b8932b5aeb97df0e89374651c77c11
   languageName: node
   linkType: hard
 
@@ -5051,14 +5051,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:^11.2.0":
-  version: 11.3.3
-  resolution: "fs-extra@npm:11.3.3"
+"fs-extra@npm:^11.1.1":
+  version: 11.4.1
+  resolution: "fs-extra@npm:11.4.1"
   dependencies:
     graceful-fs: ^4.2.0
     jsonfile: ^6.0.1
     universalify: ^2.0.0
-  checksum: fb2acabbd1e04bcaca90eadfe98e6ffba1523b8009afbb9f4c0aae5efbca0bd0bf6c9a6831df5af5aaacb98d3e499898be848fb0c03d31ae7b9d1b053e81c151
+  checksum: fa01cdefc9478e8255038beb70a0e723ea18bd9d310dbda28860f5d70488a5df31f42d095a571ee2010cbc385fda0b96b72d1b70cf58104d982d52dbc20514cf
   languageName: node
   linkType: hard
 
@@ -5415,7 +5415,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^10.3.10":
+"glob@npm:^10.3.4":
   version: 10.5.0
   resolution: "glob@npm:10.5.0"
   dependencies:
@@ -8435,7 +8435,7 @@ __metadata:
     "@voiceflow/tsconfig": 1.13.1
     "@voiceflow/vitest-config": 1.12.0
     check-dependency-version-consistency: 5.0.1
-    dpdm-fast: 1.0.14
+    dpdm: 3.14.0
     eslint: 9.39.2
     knip: 5.85.0
     lint-staged: 16.2.7
@@ -10651,10 +10651,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.7.0":
+"tslib@npm:^2.1.0, tslib@npm:^2.4.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: e4aba30e632b8c8902b47587fd13345e2827fa639e7c3121074d5ee0880723282411a8838f830b55100cbe4517672f84a2472667d355b81e8af165a55dc6203a
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.6.2":
+  version: 2.9.1
+  resolution: "tslib@npm:2.9.1"
+  checksum: 40f590cef617a6ad220ac521a0dd8b8c48faf1494468c195c792dc212b293260b7606ffd505aa52328a07954304e5c2631eb8f884034db2286a98efd1aa1686f
   languageName: node
   linkType: hard
 
@@ -10932,7 +10939,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.9.3, typescript@npm:>=5, typescript@npm:^5.6.3":
+"typescript@npm:5.9.3, typescript@npm:>=5, typescript@npm:^5.2.2":
   version: 5.9.3
   resolution: "typescript@npm:5.9.3"
   bin:
@@ -10942,7 +10949,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@5.9.3#~builtin<compat/typescript>, typescript@patch:typescript@>=5#~builtin<compat/typescript>, typescript@patch:typescript@^5.6.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@5.9.3#~builtin<compat/typescript>, typescript@patch:typescript@>=5#~builtin<compat/typescript>, typescript@patch:typescript@^5.2.2#~builtin<compat/typescript>":
   version: 5.9.3
   resolution: "typescript@patch:typescript@npm%3A5.9.3#~builtin<compat/typescript>::version=5.9.3&hash=7ad353"
   bin:
@@ -11770,8 +11777,8 @@ __metadata:
   linkType: hard
 
 "yargs@npm:^17.7.2":
-  version: 17.7.2
-  resolution: "yargs@npm:17.7.2"
+  version: 17.7.3
+  resolution: "yargs@npm:17.7.3"
   dependencies:
     cliui: ^8.0.1
     escalade: ^3.1.1
@@ -11780,7 +11787,7 @@ __metadata:
     string-width: ^4.2.3
     y18n: ^5.0.5
     yargs-parser: ^21.1.1
-  checksum: 73b572e863aa4a8cbef323dd911d79d193b772defd5a51aab0aca2d446655216f5002c42c5306033968193bdbf892a7a4c110b0d77954a7fdf563e653967b56a
+  checksum: 16fb2d4866f04aaf74f206d3df843e7a80b58a26fda47af29be51b27564c19966b1674c3acf679a26fdfa8a7e4b1b442a63cdab5db8cd3c57db7912f4473e343
   languageName: node
   linkType: hard
 
