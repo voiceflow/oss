@@ -43,7 +43,7 @@ defaults:
 
   executor: &node-executor
     name: vfcommon/node-executor-node-20
-    tag: {{ .values.node_version }}-vf-5
+    tag: {{ .values.node_version }}-vf-1
 
 workflows:
   {{- if $isMaster }}
