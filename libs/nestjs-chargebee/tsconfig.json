@@ -3,6 +3,7 @@
   "extends": "@voiceflow/tsconfig",
   "compilerOptions": {
     "experimentalDecorators": true,
+    "useDefineForClassFields": false,
     "allowSyntheticDefaultImports": true
   }
 }
