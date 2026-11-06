@@ -60,12 +60,12 @@
     "@voiceflow/git-branch-check": "1.5.0",
     "@voiceflow/husky-config": "1.4.0",
     "@voiceflow/knip-config": "1.1.1",
-    "@voiceflow/npm-package-json-lint-config": "1.2.1",
+    "@voiceflow/npm-package-json-lint-config": "1.5.0",
     "@voiceflow/prettier-config": "1.12.1",
     "@voiceflow/tsconfig": "1.13.1",
     "@voiceflow/vitest-config": "1.12.0",
     "check-dependency-version-consistency": "5.0.1",
-    "dpdm-fast": "1.0.14",
+    "dpdm": "4.3.0",
     "eslint": "9.39.2",
     "knip": "5.85.0",
     "lint-staged": "16.2.7",
@@ -79,12 +79,12 @@
     "typescript": "5.9.3",
     "vitest": "4.0.12"
   },
-  "packageManager": "yarn@3.2.1",
+  "packageManager": "yarn@4.18.1",
   "engines": {
-    "node": "20"
+    "node": "26"
   },
   "volta": {
-    "node": "20.17.0",
-    "yarn": "3.2.1"
+    "node": "26.12.1",
+    "yarn": "4.18.1"
   }
 }

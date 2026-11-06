@@ -51,7 +51,7 @@
     "rxjs": "^7"
   },
   "engines": {
-    "node": "20"
+    "node": "26"
   },
   "volta": {
     "extends": "../../package.json"

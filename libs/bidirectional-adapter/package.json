@@ -50,7 +50,7 @@
     "test:unused": "yarn g:knip --workspace @voiceflow/bidirectional-adapter"
   },
   "engines": {
-    "node": "20"
+    "node": "26"
   },
   "volta": {
     "extends": "../../package.json"

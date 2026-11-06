@@ -40,7 +40,7 @@
     "test:unused": "yarn g:knip --workspace @voiceflow/composite-reducer"
   },
   "engines": {
-    "node": "20"
+    "node": "26"
   },
   "volta": {
     "extends": "../../package.json"

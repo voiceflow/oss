@@ -32,6 +32,7 @@ workflows:
       - vfcommon/install_and_build:
           executor: &node-executor
             name: vfcommon/node-executor-node-20
+            tag: '26.12.1-vf-1'
             default_resource_class: large
           context: dev-test
           avoid_post_install_scripts: false

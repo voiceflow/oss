@@ -48,7 +48,7 @@
     "test:unused": "yarn g:knip --workspace @voiceflow/normal-store"
   },
   "engines": {
-    "node": "20"
+    "node": "26"
   },
   "volta": {
     "extends": "../../package.json"
