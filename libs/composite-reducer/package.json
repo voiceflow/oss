@@ -1,6 +1,6 @@
 {
   "name": "@voiceflow/composite-reducer",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "combine reducers based on individual properties",
   "keywords": [
     "combinedReducer",

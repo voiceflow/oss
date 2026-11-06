@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/voiceflow/oss/compare/@voiceflow/composite-reducer@3.0.0...@voiceflow/composite-reducer@4.0.0) (2026-11-06)
+
+### Features
+
+* use tsdown to build libs (ENG-1049) ([#36](https://github.com/voiceflow/oss/issues/36)) ([39bb49b](https://github.com/voiceflow/oss/commit/39bb49b11afb35782f41796d82077768505f018a))
+
+### BREAKING CHANGES
+
+* libraries are now published as ESM only; CommonJS builds are no longer included.
+
 # [3.0.0](https://github.com/voiceflow/oss/compare/@voiceflow/composite-reducer@2.2.2...@voiceflow/composite-reducer@3.0.0) (2026-11-06)
 
 ### Features
