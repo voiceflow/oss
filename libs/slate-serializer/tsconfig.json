@@ -2,12 +2,6 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@voiceflow/tsconfig",
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "build",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@test/*": ["./test/*"]
-    },
     "jsx": "react-jsx"
   }
 }
