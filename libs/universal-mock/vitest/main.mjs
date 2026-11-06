@@ -1,7 +1,7 @@
 import { vi } from 'vitest';
 
-import { createMockFactory } from '../build/cjs/mock.js';
+import { createMockFactory } from '../build/main.mjs';
 
-export { mockFree } from '../build/cjs/mock.js';
+export { mockFree } from '../build/main.mjs';
 
 export const createMock = createMockFactory(vi);

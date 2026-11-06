@@ -19,51 +19,17 @@
   "author": "Ben Teichman",
   "type": "module",
   "exports": {
-    ".": {
-      "types": "./build/esm/index.d.ts",
-      "import": "./build/esm/index.js",
-      "require": "./build/cjs/index.js"
-    },
-    "./text": {
-      "types": "./build/esm/serializers/text.d.ts",
-      "import": "./build/esm/serializers/text.js",
-      "require": "./build/cjs/serializers/text.js"
-    },
-    "./markdown": {
-      "types": "./build/esm/serializers/markdown.d.ts",
-      "import": "./build/esm/serializers/markdown.js",
-      "require": "./build/cjs/serializers/markdown.js"
-    },
-    "./jsx": {
-      "types": "./build/esm/serializers/jsx.d.ts",
-      "import": "./build/esm/serializers/jsx.js",
-      "require": "./build/cjs/serializers/jsx.js"
-    }
-  },
-  "main": "build/cjs/index.js",
-  "module": "build/esm/index.js",
-  "types": "build/esm/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "text": [
-        "./build/esm/serializers/text.d.ts"
-      ],
-      "jsx": [
-        "./build/esm/serializers/jsx.d.ts"
-      ],
-      "markdown": [
-        "./build/esm/serializers/markdown.d.ts"
-      ]
-    }
+    ".": "./build/index.mjs",
+    "./jsx": "./build/jsx.mjs",
+    "./markdown": "./build/markdown.mjs",
+    "./text": "./build/text.mjs"
   },
   "files": [
     "build"
   ],
   "scripts": {
     "build": "yarn g:turbo run build:cmd --filter=@voiceflow/slate-serializer...",
-    "build:cjs": "yarn g:build:pkg cjs",
-    "build:cmd": "yarn g:run-p build:cjs build:esm",
-    "build:esm": "yarn g:build:pkg esm",
+    "build:cmd": "yarn g:tsdown",
     "clean": "yarn g:rimraf build",
     "lint": "yarn g:run-p -c lint:eslint lint:prettier",
     "lint:eslint": "yarn g:eslint",

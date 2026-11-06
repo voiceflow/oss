@@ -3,19 +3,11 @@
   "pipeline": {
     "build:cmd": {
       "outputs": ["build/**"],
-      "inputs": [
-        "../../scripts/build_pkg.sh",
-        "src/**",
-        ":!src/**/*.test.ts",
-        "package.json",
-        "tsconfig.json",
-        "tsconfig.build.json",
-        "tsconfig.build.*.json"
-      ],
+      "inputs": ["src/**", ":!src/**/*.test.ts", "package.json", "tsconfig.json", "tsdown.config.ts"],
       "dependsOn": ["^build:cmd"]
     },
     "test:types": {
-      "inputs": ["src/**", "package.json", "tsconfig.json", "tsconfig.build.json", "tsconfig.build.*.json"],
+      "inputs": ["src/**", "package.json", "tsconfig.json"],
       "dependsOn": ["^build:cmd"]
     },
     "test:cycles": {
