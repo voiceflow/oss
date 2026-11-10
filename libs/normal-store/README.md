@@ -23,8 +23,8 @@ const denormalized = denormalize(normalized); // [{ id: 'a' }, { id: 'b' }]
 ## Example
 
 ```ts
-import axios from 'axios';
 import { normalize, getOne, patchOne, removeOne } from '@voiceflow/normal-store';
+import axios from 'axios';
 
 const products = await axios.get('/products').then((res) => res.data);
 

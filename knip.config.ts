@@ -9,7 +9,7 @@ const config: KnipConfig = {
   workspaces: {
     '.': {
       project: ['!.yarn'],
-      ignoreDependencies: ['source-map-support', '@voiceflow/husky-config'],
+      ignoreDependencies: ['source-map-support', '@voiceflow/husky-config', '@voiceflow/oxfmt-config'],
     },
 
     'libs/nestjs-chargebee': {

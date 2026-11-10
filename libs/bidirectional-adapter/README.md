@@ -24,8 +24,8 @@ const adapter = createAdapter<string, number>(
 ## Example
 
 ```ts
-import axios from 'axios';
 import createAdapter from '@voiceflow/bidirectional-adapter';
+import axios from 'axios';
 
 const accountAdapter = createAdapter(
   (dbAccount) => ({

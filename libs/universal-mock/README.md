@@ -11,8 +11,8 @@ yarn add --exact @voiceflow/universal-mock
 ## Usage
 
 ```ts
-import { expect } from 'vitest';
 import { createMock } from '@voiceflow/universal-mock/vitest';
+import { expect } from 'vitest';
 
 class UserService {
   doThing() {}

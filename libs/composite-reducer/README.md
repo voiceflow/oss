@@ -49,7 +49,7 @@ The dedicated reducer updates/works with a smaller, more concise state.
 
 The main reducer can still act on the property if it has to.
 
-Along with [`combinedReducer`](), this encourges the overall reducer to be cleaner/better organized.
+Along with [`combinedReducer`](<>), this encourges the overall reducer to be cleaner/better organized.
 
 ## Example
 
