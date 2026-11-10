@@ -1,27 +1,27 @@
 {
   "name": "@voiceflow/nestjs-chargebee",
   "version": "4.0.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/voiceflow/oss.git"
   },
-  "license": "MIT",
+  "files": [
+    "build"
+  ],
   "type": "module",
   "exports": {
     ".": "./build/index.mjs",
     "./models": "./build/models.mjs"
   },
-  "files": [
-    "build"
-  ],
   "scripts": {
     "build": "yarn g:turbo run build:cmd --filter=@voiceflow/nestjs-chargebee...",
     "build:cmd": "yarn g:tsdown",
     "clean": "yarn g:rimraf build",
-    "lint": "yarn g:run-p -c lint:eslint lint:prettier",
-    "lint:eslint": "yarn g:eslint",
-    "lint:fix": "yarn g:run-p -c \"lint:eslint --fix\" \"lint:prettier --write\"",
-    "lint:prettier": "yarn g:prettier --check",
+    "lint": "yarn g:run-p -c lint:oxlint lint:oxfmt",
+    "lint:fix": "yarn g:run-p -c \"g:oxlint . --fix\" \"g:oxfmt .\"",
+    "lint:oxfmt": "yarn g:oxfmt --check .",
+    "lint:oxlint": "yarn g:oxlint .",
     "test": "yarn g:run-p -c test:types test:cycles test:unused",
     "test:cycles": "yarn g:dpdm src/main.ts",
     "test:types": "yarn g:tsc --noEmit",
