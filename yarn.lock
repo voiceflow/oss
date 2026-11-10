@@ -389,24 +389,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/common@npm:10.1.3":
-  version: 10.1.3
-  resolution: "@nestjs/common@npm:10.1.3"
+"@nestjs/common@npm:10.4.16":
+  version: 10.4.16
+  resolution: "@nestjs/common@npm:10.4.16"
   dependencies:
     iterare: "npm:1.2.1"
-    tslib: "npm:2.6.1"
+    tslib: "npm:2.8.1"
     uid: "npm:2.0.2"
   peerDependencies:
     class-transformer: "*"
     class-validator: "*"
-    reflect-metadata: ^0.1.12
+    file-type: ^20.4.1
+    reflect-metadata: ^0.1.12 || ^0.2.0
     rxjs: ^7.1.0
   peerDependenciesMeta:
     class-transformer:
       optional: true
     class-validator:
       optional: true
-  checksum: 10/61b1b0974e7e08e75cb46e8c90bda789397617d79cf36da8eebccb8b84c7214f37004b06e34846ba2b6437f6a6b83aa2f29344d39780f7173664cb0918168b81
+    file-type:
+      optional: true
+  checksum: 10/af0979def8f3fef575c4be02d54ae44066e985b0a90bc82b6431ecc402ef5aa0ad452f3add4c81752d3c8725cc9f4db49a421689fd79b02fa0bbc96b7e9f0625
   languageName: node
   linkType: hard
 
@@ -1319,7 +1322,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@voiceflow/nestjs-chargebee@workspace:libs/nestjs-chargebee"
   dependencies:
-    "@nestjs/common": "npm:10.1.3"
+    "@nestjs/common": "npm:10.4.16"
     "@nestjs/core": "npm:10.1.3"
     chargebee: "npm:3.26.0"
     rxjs: "npm:7.8.1"
@@ -6214,7 +6217,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.1.0, tslib@npm:^2.4.0":
+"tslib@npm:2.8.1, tslib@npm:^2.1.0, tslib@npm:^2.4.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10/3e2e043d5c2316461cb54e5c7fe02c30ef6dccb3384717ca22ae5c6b5bc95232a6241df19c622d9c73b809bea33b187f6dbc73030963e29950c2141bc32a79f7
