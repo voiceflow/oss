@@ -91,13 +91,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:20.0.0":
-  version: 20.0.0
-  resolution: "@commitlint/config-conventional@npm:20.0.0"
+"@commitlint/config-conventional@npm:21.2.0":
+  version: 21.2.0
+  resolution: "@commitlint/config-conventional@npm:21.2.0"
   dependencies:
-    "@commitlint/types": "npm:^20.0.0"
-    conventional-changelog-conventionalcommits: "npm:^7.0.2"
-  checksum: 10/a98dd9fa3a23364143c95b124e35a81b0c5cb1e35866edd9cced1476dcb25268866a745f655ae22ff3d081013bcc5535402373b9723424a8aacf31dbb353f710
+    "@commitlint/types": "npm:^21.2.0"
+    conventional-changelog-conventionalcommits: "npm:^10.0.0"
+  checksum: 10/f00cab4f9f5f40460d8dc7167e1370385a2f9a300e7c5ad19c8e97ce290043c36efb9134f2107e419990ae9ea31fad1eda9ed820a8ecdc47e09e17e5092f369e
   languageName: node
   linkType: hard
 
@@ -255,16 +255,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/types@npm:^20.0.0":
-  version: 20.0.0
-  resolution: "@commitlint/types@npm:20.0.0"
-  dependencies:
-    "@types/conventional-commits-parser": "npm:^5.0.0"
-    chalk: "npm:^5.3.0"
-  checksum: 10/36c1eec3924f16221c05de0610c2e3073a994c6fa9901d1636c6235b8998c9ad6b3a7981eeb35ae2541d875f08b99b1cdffddd7944ccd0ebca26fba742fba0ac
-  languageName: node
-  linkType: hard
-
 "@commitlint/types@npm:^20.2.0":
   version: 20.2.0
   resolution: "@commitlint/types@npm:20.2.0"
@@ -272,6 +262,23 @@ __metadata:
     "@types/conventional-commits-parser": "npm:^5.0.0"
     chalk: "npm:^5.3.0"
   checksum: 10/456aa1701ca75df4dcf369b391948880832ab0b661bb00242d1c372abf1680fd92c1d2d5279596e5d5581b7ff9db4dacb9138717f690777b668f2a8eaf0b65b9
+  languageName: node
+  linkType: hard
+
+"@commitlint/types@npm:^21.2.0":
+  version: 21.2.3
+  resolution: "@commitlint/types@npm:21.2.3"
+  dependencies:
+    conventional-commits-parser: "npm:^7.0.0"
+    picocolors: "npm:^1.1.1"
+  checksum: 10/0485e8e3d3507f2feb5376d0c9e965c035d5a5da6c6701de41ddddb80c88c3a0b17b40e77b91927d5e09b368dd4b403f8b98311c09f36ff1ab86c7a61b17c2f0
+  languageName: node
+  linkType: hard
+
+"@conventional-changelog/template@npm:^1.4.0":
+  version: 1.4.1
+  resolution: "@conventional-changelog/template@npm:1.4.1"
+  checksum: 10/330db857f8652aed2882fd8b53913d83ae6aa5942168fa17a0908e1a5667d6f80499032c0dec81e3caa0640353fadde3a15c15c701578a57cd2a229a8cf461d7
   languageName: node
   linkType: hard
 
@@ -1034,6 +1041,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@simple-libs/stream-utils@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@simple-libs/stream-utils@npm:2.0.0"
+  checksum: 10/012fddda038a0657e62ae2cbb4f89c9ac56d0d2c611b695695ddaabf70cfc9c5207e6b88a9cb3497b9ff05fc74fbe75296cb70f1d1cf9c015efff197b06ee481
+  languageName: node
+  linkType: hard
+
 "@sindresorhus/merge-streams@npm:^2.1.0":
   version: 2.3.0
   resolution: "@sindresorhus/merge-streams@npm:2.3.0"
@@ -1262,12 +1276,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@voiceflow/commitlint-config@npm:2.7.0":
-  version: 2.7.0
-  resolution: "@voiceflow/commitlint-config@npm:2.7.0"
+"@voiceflow/commitlint-config@npm:2.11.0":
+  version: 2.11.0
+  resolution: "@voiceflow/commitlint-config@npm:2.11.0"
   dependencies:
-    "@commitlint/config-conventional": "npm:20.0.0"
-  checksum: 10/d971d86de53bc00991ff38020226c5dff48bf29eb92c3d830957602ca497ee7bfcbe1fbce58fc0a2f8e67029f9f8af1be435611f369a7265894a687b3ccffcb8
+    "@commitlint/config-conventional": "npm:21.2.0"
+  checksum: 10/78991ccdf4898be631f9aa03c1b050967e7e4569ab3c29b047da4f34cefac411b6f5b289bb552946596d68c4a72c9431701bba08dd3cd2264d360296174086f3
   languageName: node
   linkType: hard
 
@@ -1277,41 +1291,41 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@voiceflow/dtos-interact@npm:1.17.1":
-  version: 1.17.1
-  resolution: "@voiceflow/dtos-interact@npm:1.17.1"
+"@voiceflow/dtos-interact@npm:1.74.0":
+  version: 1.74.0
+  resolution: "@voiceflow/dtos-interact@npm:1.74.0"
   peerDependencies:
     zod: ^3
-  checksum: 10/3b038ca0f14b279a21a4a24e266d978fa3c33421f5612e12cae38522a6726ae19e736ecd639669767f0b8640d72510180d40951ee17f209ed45e8e882a385590
+  checksum: 10/f63cb6ab4ff0f8b75dda5f69a14163359fd4f6ae8af4825596b0e5b8e620eac51ae463fe19a2b2fc10e9dd21e6c84bddf1b5780fbd59488d4865cad91c6cdf9d
   languageName: node
   linkType: hard
 
-"@voiceflow/git-branch-check@npm:1.5.0":
-  version: 1.5.0
-  resolution: "@voiceflow/git-branch-check@npm:1.5.0"
+"@voiceflow/git-branch-check@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@voiceflow/git-branch-check@npm:1.6.0"
   dependencies:
     current-git-branch: "npm:1.1.0"
   bin:
     git-branch-check: src/index.js
-  checksum: 10/9fdfbb040731501408f35b8018c70ce91124ac3178acc5e8957e64f0309f306348ee870ec5427d35a933b0c795ad37b5d075e7236e4757f0989ebfc1f20e51f4
+  checksum: 10/c40e10d5bc75d0519268c9e871a867a64d16d5c87865fc921a568d41e1c277c314f306b370bdadfdc1f649d19118ac179a4e5a93cf414960ecad87c58badbff9
   languageName: node
   linkType: hard
 
-"@voiceflow/husky-config@npm:1.4.0":
-  version: 1.4.0
-  resolution: "@voiceflow/husky-config@npm:1.4.0"
+"@voiceflow/husky-config@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@voiceflow/husky-config@npm:1.5.2"
   dependencies:
     husky: "npm:9.1.7"
-  checksum: 10/ec0930d266473bb26ffdc93b8f07cf985fea175e3694d1d50f29422ea356c5099b214cd0e47ca32101e4a310b9be374d0446fe00dbeacf6354fd844ca0950bed
+  checksum: 10/e53602d7e41cf370441d6da6af8434ce9996b3349fe8427c93a234303e1e04966d2c3494749e3a1bb6e8c8ed67dfde68e5e328af6aaa4c0c775f2657b27f64f6
   languageName: node
   linkType: hard
 
-"@voiceflow/knip-config@npm:1.1.1":
-  version: 1.1.1
-  resolution: "@voiceflow/knip-config@npm:1.1.1"
+"@voiceflow/knip-config@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@voiceflow/knip-config@npm:1.4.0"
   peerDependencies:
-    knip: ^5
-  checksum: 10/444597133c0a1b01a65edf1e871f7ffd0636d5dd88ce10f679aa9335e3fe16103ee380d7ee74ec215d1bf9bb0b942164dd2736cc0a98b89c598c6b9f27097fe7
+    knip: ^6
+  checksum: 10/18749c55c3e8bf4dbe9d389e24d59c0f9f46d2bea7fa0daa20b757b212e9859dffd62e3716c4cdcc8a497b8ebef05a9a3179862cbee92bb3febedb5919c85e7e
   languageName: node
   linkType: hard
 
@@ -1368,7 +1382,7 @@ __metadata:
   resolution: "@voiceflow/slate-serializer@workspace:libs/slate-serializer"
   dependencies:
     "@types/react": "npm:18.2.4"
-    "@voiceflow/dtos-interact": "npm:1.17.1"
+    "@voiceflow/dtos-interact": "npm:1.74.0"
     csstype: "npm:3.2.3"
     react: "npm:18.2.0"
     slate: "npm:0.94.1"
@@ -1409,14 +1423,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@voiceflow/vitest-config@npm:1.16.0":
-  version: 1.16.0
-  resolution: "@voiceflow/vitest-config@npm:1.16.0"
+"@voiceflow/vitest-config@npm:1.17.0":
+  version: 1.17.0
+  resolution: "@voiceflow/vitest-config@npm:1.17.0"
   dependencies:
     "@vitest/coverage-v8": "npm:4.1.10"
   peerDependencies:
     vitest: 4.1.10
-  checksum: 10/4958689b38d3b680a7931ac706ae7ff99d79c6716164e900fe2090b6fbcd34577d8ee3d3cff8fa9be8d4892dafd95de700e01b6c2b2392888e89e4c688ebdadd
+  checksum: 10/922fc5b9e11fc94ade9ea5f06bfe3c84b0b329630eb3136982e960979ac1cfbac461caa87ad541fdded67b49c0dfe4dbdad44bd46b56bc477f89079bab3eaffe
   languageName: node
   linkType: hard
 
@@ -1632,6 +1646,13 @@ __metadata:
   version: 2.0.1
   resolution: "argparse@npm:2.0.1"
   checksum: 10/18640244e641a417ec75a9bd38b0b2b6b95af5199aa241b131d4b2fb206f334d7ecc600bd194861610a5579084978bfcbb02baa399dbe442d56d0ae5e60dbaef
+  languageName: node
+  linkType: hard
+
+"argue-cli@npm:^3.1.0":
+  version: 3.2.0
+  resolution: "argue-cli@npm:3.2.0"
+  checksum: 10/eedd1936b6b63cf05264841d968e5f0cea3a11a743788463a7a4a93418f50ea8e89bba73ad2da2f07ae2829c7f493ff41691d6d14111ddd28f606c4445a60a12
   languageName: node
   linkType: hard
 
@@ -2076,12 +2097,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog-conventionalcommits@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "conventional-changelog-conventionalcommits@npm:7.0.2"
+"conventional-changelog-conventionalcommits@npm:^10.0.0":
+  version: 10.4.1
+  resolution: "conventional-changelog-conventionalcommits@npm:10.4.1"
   dependencies:
-    compare-func: "npm:^2.0.0"
-  checksum: 10/3cc6586ac57cc54c0595b28ae22e8b674c970034bad35e467f71aba395278a6ef43351cfbf782a5fc33eb13ed4ad843a145b89ad1444f5fa571e3bf9c1d5519b
+    "@conventional-changelog/template": "npm:^1.4.0"
+  checksum: 10/87e4e726b1f34bf56227bfc2b4c156a287ff858d6c47cdf418ac20d5cd2813ef13b18cb7a01628813e4f354df36179213dad321401d61897feeb27c7db1e358a
   languageName: node
   linkType: hard
 
@@ -2096,6 +2117,18 @@ __metadata:
   bin:
     conventional-commits-parser: cli.mjs
   checksum: 10/3b56a9313127f18c56b7fc0fdb0c49d2184ec18e0574e64580a0d5a3c3e0f3eecfb8bc3131dce967bfe9fd27debd5f42b7fc1f09e8e541e688e1dd2b57f49278
+  languageName: node
+  linkType: hard
+
+"conventional-commits-parser@npm:^7.0.0":
+  version: 7.1.4
+  resolution: "conventional-commits-parser@npm:7.1.4"
+  dependencies:
+    "@simple-libs/stream-utils": "npm:^2.0.0"
+    argue-cli: "npm:^3.1.0"
+  bin:
+    conventional-commits-parser: ./dist/cli/index.js
+  checksum: 10/77e0471900f2690c00131e6c9e62cc9cc6438b9581396de4c3fe43bf1f7d1fc4a33f81e0d74aed5f90c27f02736169014650f7f3897a98b4e4ff300a40915bd2
   languageName: node
   linkType: hard
 
@@ -4590,16 +4623,16 @@ __metadata:
   resolution: "oss@workspace:."
   dependencies:
     "@commitlint/cli": "npm:20.2.0"
-    "@voiceflow/commitlint-config": "npm:2.7.0"
-    "@voiceflow/git-branch-check": "npm:1.5.0"
-    "@voiceflow/husky-config": "npm:1.4.0"
-    "@voiceflow/knip-config": "npm:1.1.1"
+    "@voiceflow/commitlint-config": "npm:2.11.0"
+    "@voiceflow/git-branch-check": "npm:1.6.0"
+    "@voiceflow/husky-config": "npm:1.5.2"
+    "@voiceflow/knip-config": "npm:1.4.0"
     "@voiceflow/npm-package-json-lint-config": "npm:1.5.0"
     "@voiceflow/oxfmt-config": "npm:1.3.0"
     "@voiceflow/oxlint-config": "npm:1.4.0"
     "@voiceflow/tsconfig": "npm:1.18.0"
     "@voiceflow/tsdown-config": "npm:1.3.0"
-    "@voiceflow/vitest-config": "npm:1.16.0"
+    "@voiceflow/vitest-config": "npm:1.17.0"
     check-dependency-version-consistency: "npm:5.0.1"
     dpdm: "npm:4.3.0"
     knip: "npm:5.85.0"
