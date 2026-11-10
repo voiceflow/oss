@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/voiceflow/oss/compare/@voiceflow/normal-store@4.0.0...@voiceflow/normal-store@4.1.0) (2026-11-10)
+
+### Features
+
+* replace eslint and prettier with oxc (ENG-1050) ([#37](https://github.com/voiceflow/oss/issues/37)) ([4995af9](https://github.com/voiceflow/oss/commit/4995af99b7dc82aaee138a7139d3de2aed98f14f))
+
 # [4.0.0](https://github.com/voiceflow/oss/compare/@voiceflow/normal-store@3.0.0...@voiceflow/normal-store@4.0.0) (2026-11-06)
 
 ### Features

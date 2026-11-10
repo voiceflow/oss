@@ -1,6 +1,6 @@
 {
   "name": "@voiceflow/slate-serializer",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Utilities for serializing slate data",
   "keywords": [
     "react",
