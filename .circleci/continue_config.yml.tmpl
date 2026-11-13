@@ -67,6 +67,10 @@ workflows:
           force_execute: true
           run_in_container: false
           container_folder_to_copy: "" #Copy all
+          post-steps:
+            - run:
+                name: Turbo version
+                command: yarn turbo --version
 
       {{- $testJobs := (coll.Slice "lint_report" "types_tests" "dependency_tests" "unit_tests")}}
       {{ range $testJob := $testJobs }}
