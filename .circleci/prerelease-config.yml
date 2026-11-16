@@ -24,7 +24,7 @@ parameters:
     default: ''
 
 orbs:
-  vfcommon: voiceflow/common@0.95.1
+  vfcommon: voiceflow/common@0.124.0
 
 workflows:
   test-and-release:
