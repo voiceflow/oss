@@ -22,7 +22,7 @@ parameters:
 setup: true
 
 orbs:
-  vfcommon: voiceflow/common@0.101.2
+  vfcommon: voiceflow/common@0.125.0
   gomplate: xavientois/gomplate@0.2.0
   path-filtering: circleci/path-filtering@1.3.0
 
