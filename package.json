@@ -61,7 +61,7 @@
     "tsdown": "0.23.2",
     "turbo": "2.11.10",
     "typescript": "6.0.3",
-    "vitest": "4.1.10"
+    "vitest": "4.1.11"
   },
   "resolutions": {
     "browserslist": "4.28.1",
